@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+</head>
+
+<body>
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/18831563.js"></script>
+<noscript><a href="http://www.51.la/?18831563" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/18831563.asp" style="border:none" /></a></noscript>
+</body>
+<script>
+//js获取url参数值
+        function request(paras) {
+            var url = location.href;
+            var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+            var paraObj = { };
+            for (i = 0; j = paraString[i]; i++) {
+                paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
+            }
+            var returnValue = paraObj[paras.toLowerCase()];
+            if (typeof (returnValue) == "undefined") {
+                return "";
+            } else {
+                return returnValue;
+            }
+        }
+	
+        var type = decodeURI(request("type"));
+        if(type==1){
+         window.location.href="https://tb.cn/S9WMoYx"; //补肾短连接：
+        }else if(type==2){
+         window.location.href="https://tb.cn/d2WpmYx"; //金戈1片装短连接：
+        }else if(type==3){
+         window.location.href="https://tb.cn/eP9mmYx"; //来利短连接：
+        }else if(type==4){
+         window.location.href="https://dstdyf.tmall.com/"; 
+        }else{
+         window.location.href="https://tb.cn/EttBPKy"; 
+        }
+// $(document).ready(function () {
+// 		 window.location.href="https://tb.cn/EttBPKy";
+// 	$.post("http://router.111yao.com/sltRouter?method=statisticsipuriservice",function(data){
+// 	});
+
+// });  
+    
+</script>
+</html>

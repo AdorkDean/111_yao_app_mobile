@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="open_sql" >
+  <resultMap id="bigTable" class="com.rc.openapi.model.BigTableVO" >
+	  <result column="cid" property="cId" jdbcType="VARCHAR" />
+	  <result column="name" property="name" jdbcType="VARCHAR" />
+	  <result column="type" property="type" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <resultMap id="productVo" class="com.rc.openapi.model.ProductBarCodeVo" >
+	  <result column="id" property="id" jdbcType="BIGINT" />
+	  <result column="name" property="name" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <select id="selectBigTable_keyword" parameterClass="java.util.Map" resultMap="bigTable" >
+		SELECT CAST(cid AS CHAR) as cid,name,CAST(type AS CHAR) as type from nbig_table where type=3
+  </select>
+  
+  <!-- 
+  <select id="selectBigTable_parent" parameterClass="java.util.Map" resultMap="bigTable" >
+		
+		SELECT CAST(n.cid AS CHAR) as cid,d.name,CAST(n.type AS CHAR) as type from  nbig_table n,dst_product_category d where n.type=2 and n.cid=d.id and d.parent is null
+  
+  
+  </select>
+  
+   -->
+   
+<select id="selectBigTable_parent" parameterClass="java.util.Map" resultMap="bigTable" >		
+SELECT 
+  CAST(n.cid AS CHAR) AS cid,
+  d.category_name AS NAME,
+  CAST(n.type AS CHAR) AS TYPE 
+FROM
+  nbig_table n,
+  t_category d 
+WHERE n.type = 2 
+  AND n.cid = d.id 
+   AND d.category_level=2
+</select>
+  
+  <!-- 
+  <select id="selectBigTable_son" parameterClass="java.util.Map" resultMap="bigTable" >
+		SELECT CAST(n.cid AS CHAR) as cid,d.name,CAST(n.type AS CHAR) as type from  nbig_table n,dst_product_category d where n.type=2 and n.cid=d.id and d.parent=#cid#
+  </select>
+   -->
+   
+<select id="selectBigTable_son" parameterClass="java.util.Map" resultClass="java.util.HashMap" >
+SELECT 
+  CAST(n.cid AS CHAR) AS cId,
+  d.category_name AS name,
+  CAST(n.type AS CHAR) AS type 
+FROM
+  nbig_table n,
+  t_category d 
+WHERE n.type = 2 
+  AND n.cid = d.id 
+  AND d.parent_id = #cid#
+ </select>   
+  
+  <select id="select_default" parameterClass="java.util.Map" resultClass="java.lang.String" >
+		SELECT name from nbig_table where type=4
+  </select>
+  
+  <select id="barcodescan" parameterClass="java.util.Map" resultClass="java.util.HashMap" >
+		<!-- SELECT id,short_name from  t_goods where bar_code=$barCode$ and app_status=1 and is_app=1-->
+		SELECT 
+		  g.id,
+		  g.short_name 
+		FROM
+		  t_goods g 
+		  LEFT JOIN t_goods_price gp 
+		    ON g.id = gp.`goods_id` 
+		    AND gp.`price_type` = 'app' 
+		WHERE g.bar_code = $barCode$ AND gp.`status` = 1 
+  </select> 
+  
+  <select id="getProduct_id" parameterClass="java.util.Map" resultMap="productVo" >
+		SELECT id,name FROM dst_product where id =#id#  and is_marketable = TRUE 
+  </select>  
+</sqlMap>

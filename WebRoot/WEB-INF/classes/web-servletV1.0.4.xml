@@ -1,0 +1,233 @@
+<!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓刘志强↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+<servlet>
+	<servlet-name>GetAddressByCityService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.receiver.GetAddressByCityService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetAddressByCityService</servlet-name>
+	<url-pattern>/URIService/getaddressbycityservice</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>AddReceiverAddressURIService-V4</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.receiver.AddReceiverAddressURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>AddReceiverAddressURIService-V4</servlet-name>
+	<url-pattern>/URIService/addReceiverAddress-V4</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>UpdateReceiverAddressURIService-V4</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.receiver.UpdateReceiverAddressURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>UpdateReceiverAddressURIService-V4</servlet-name>
+	<url-pattern>/URIService/updateReceiverAddress-V4</url-pattern>
+</servlet-mapping>
+
+<!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑刘志强↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
+
+<!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓杨洁亮↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+<servlet>
+	<servlet-name>StatisticsIPURIService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.StatisticsIPURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>StatisticsIPURIService</servlet-name>
+	<url-pattern>/URIService/statisticsipuriservice</url-pattern>
+</servlet-mapping>
+
+<!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑杨洁亮↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
+
+
+<servlet>
+	<servlet-name>rxproductService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.receiver.RXProductService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>rxproductService</servlet-name>
+	<url-pattern>/URIService/rxproductService</url-pattern>
+</servlet-mapping>
+<!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓张杰↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+<servlet>
+	<servlet-name>GetReserveOrderPricesURLService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.receiver.GetReserveOrderPricesURLService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetReserveOrderPricesURLService</servlet-name>
+	<url-pattern>/URIService/getReserveOrderPricesURLService</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>CreateReserveOrderURLService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.receiver.CreateReserveOrderURLService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>CreateReserveOrderURLService</servlet-name>
+	<url-pattern>/URIService/createReserveOrderURLService</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>GetGoodStockURIService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.receiver.GetGoodStockURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetGoodStockURIService</servlet-name>
+	<url-pattern>/URIService/getGoodStockURIService</url-pattern>
+</servlet-mapping>
+<!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑张杰↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
+<servlet>
+	<servlet-name>getStartImgService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.receiver.GetStartImgService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>getStartImgService</servlet-name>
+	<url-pattern>/URIService/getStartImgService</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>OrderPayServiceV4</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.order.OrderPayService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>OrderPayServiceV4</servlet-name>
+	<url-pattern>/URIService/OrderPayV4</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>OrderQueryResultService-V4</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.order.OrderQueryResultService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>OrderQueryResultService-V4</servlet-name>
+	<url-pattern>/URIService/OrderQueryResultService-V4</url-pattern>
+</servlet-mapping>
+
+
+
+<!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓魏↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+
+<servlet>
+	<servlet-name>GetHomePageActivityServiceV4</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.index.GetHomePageActivityService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetHomePageActivityServiceV4</servlet-name>
+	<url-pattern>/URIService/GetHomePageActivityServiceV4</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>GetProductCategoryServiceV4</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.category.GetProductCategoryService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetProductCategoryServiceV4</servlet-name>
+	<url-pattern>/URIService/GetProductCategoryServiceV4</url-pattern>
+</servlet-mapping>
+
+<servlet>
+
+	<servlet-name>GetSubProductCategoryServiceV4</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.category.GetSubProductCategoryService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetSubProductCategoryServiceV4</servlet-name>
+	<url-pattern>/URIService/GetSubProductCategoryServiceV4</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>GetRotateMessageService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.index.GetRotateMessageService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetRotateMessageService</servlet-name>
+	<url-pattern>/URIService/GetRotateMessageService</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>GetHomeNewInfoService4</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.index.GetHomeNewInfoService4
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetHomeNewInfoService4</servlet-name>
+	<url-pattern>/URIService/GetHomeNewInfoService4</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>TestUtilService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.category.TestUtilService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>TestUtilService</servlet-name>
+	<url-pattern>/URIService/TestUtilService</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>AssociationKeyService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.index.AssociationKeyService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>AssociationKeyService</servlet-name>
+	<url-pattern>/URIService/AssociationKeyService</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>TrendingKeywordService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.index.TrendingKeywordService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>TrendingKeywordService</servlet-name>
+	<url-pattern>/URIService/TrendingKeywordService</url-pattern>
+</servlet-mapping>
+<!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑魏↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
+
+<!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ByLGP↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+<servlet>
+	<servlet-name>GetProductInfoService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV4.goodsdetail.GetProductInfoService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetProductInfoService</servlet-name>
+	<url-pattern>/URIService/GetProductInfoService</url-pattern>
+</servlet-mapping>
+<!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->

@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="t_goods" >
+  <resultMap id="ibatorgenerated_BaseResultMap" class="com.rc.openapi.vo.TGoods" >
+    <result column="id" property="id" jdbcType="BIGINT" />
+    <result column="short_name" property="shortName" jdbcType="VARCHAR" />
+    <result column="goods_name" property="goodsName" jdbcType="VARCHAR" />
+    <result column="main_title" property="mainTitle" jdbcType="VARCHAR" />
+    <result column="sub_title" property="subTitle" jdbcType="VARCHAR" />
+    <result column="generic_name" property="genericName" jdbcType="VARCHAR" />
+    <result column="SKU_ID" property="skuId" jdbcType="VARCHAR" />
+    <result column="goodsno" property="goodsno" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="DECIMAL" />
+    <result column="cost_price" property="costPrice" jdbcType="DECIMAL" />
+    <result column="unit" property="unit" jdbcType="VARCHAR" />
+    <result column="weight" property="weight" jdbcType="DECIMAL" />
+    <result column="stock" property="stock" jdbcType="BIGINT" />
+    <result column="integral" property="integral" jdbcType="BIGINT" />
+    <result column="is_release" property="isRelease" jdbcType="INTEGER" />
+    <result column="is_suit" property="isSuit" jdbcType="INTEGER" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="spec" property="spec" jdbcType="VARCHAR" />
+    <result column="approval_number" property="approvalNumber" jdbcType="VARCHAR" />
+    <result column="bar_code" property="barCode" jdbcType="VARCHAR" />
+    <result column="manufacturer_id" property="manufacturerId" jdbcType="BIGINT" />
+    <result column="dose_id" property="doseId" jdbcType="BIGINT" />
+    <result column="abbreviation_picture" property="abbreviationPicture" jdbcType="VARCHAR" />
+    <result column="brand_id" property="brandId" jdbcType="BIGINT" />
+    <result column="promotion_id" property="promotionId" jdbcType="BIGINT" />
+    <result column="create_dt" property="createDt" jdbcType="TIMESTAMP" />
+    <result column="goodscode" property="goodscode" jdbcType="VARCHAR" />
+    <result column="good_alias" property="goodAlias" jdbcType="VARCHAR" />
+    <result column="search_word" property="searchWord" jdbcType="VARCHAR" />
+    <result column="drug_code" property="drugCode" jdbcType="VARCHAR" />
+    <result column="pinyin" property="pinyin" jdbcType="VARCHAR" />
+  </resultMap>
+  
+<resultMap id="productVo" class="com.rc.openapi.model.ProductVo" >
+    <result column="id" property="pid" jdbcType="VARCHAR" />
+    <result column="short_name" property="name" jdbcType="VARCHAR" />
+    <result column="abbreviation_picture" property="image" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="DECIMAL" />
+    <result column="market_price" property="marketPrice" jdbcType="DECIMAL" />
+    <result column="discount" property="discount" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+  </resultMap>  
+  
+   <!-- 商品购物车 实体 -->
+   <resultMap id="OrderGoodCart_BaseResultMap" class="com.rc.openapi.model.OrderGoodCart" >
+     <result column="id" property="id" jdbcType="BIGINT" />
+     <result column="app_price" property="appPrice" jdbcType="DECIMAL" />
+     <result column="goods_name" property="goodsName" jdbcType="VARCHAR" />
+     <result column="stock" property="stock" jdbcType="BIGINT" />
+     <result column="quantity" property="quantity" jdbcType="INTEGER" />
+     <result column="abbreviation_picture" property="abbreviationPicture" jdbcType="VARCHAR" />
+     <result column="spec" property="spec" jdbcType="VARCHAR" />
+     <result column="promotion_id" property="promotionId" jdbcType="BIGINT" />
+     <result column="if_premiums" property="ifPremiums" jdbcType="INTEGER" />
+     <result column="brand_id" property="brandId" jdbcType="BIGINT" />
+     <result column="categoryid" property="categoryid" jdbcType="BIGINT" />
+     <result column="weight" property="weight" jdbcType="DECIMAL" />
+     <result column="app_status" property="appStatus" jdbcType="INTEGER" />
+     <result column="type" property="type" jdbcType="INTEGER" />
+  </resultMap>
+  
+<resultMap id="goodsVO" class="com.rc.openapi.model.KeyWordSearchVO" >
+    <result column="short_name" property="name" jdbcType="VARCHAR" />
+  </resultMap>    
+  <sql id="ibatorgenerated_Example_Where_Clause" >
+    <iterate property="oredCriteria" conjunction="or" prepend="where" removeFirstPrepend="iterate" >
+      <isEqual property="oredCriteria[].valid" compareValue="true" >
+        (
+        <iterate prepend="and" property="oredCriteria[].criteriaWithoutValue" conjunction="and" >
+          $oredCriteria[].criteriaWithoutValue[]$
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithSingleValue" conjunction="and" >
+          $oredCriteria[].criteriaWithSingleValue[].condition$
+            #oredCriteria[].criteriaWithSingleValue[].value#
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithListValue" conjunction="and" >
+          $oredCriteria[].criteriaWithListValue[].condition$
+          <iterate property="oredCriteria[].criteriaWithListValue[].values" open="(" close=")" conjunction="," >
+            #oredCriteria[].criteriaWithListValue[].values[]#
+          </iterate>
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithBetweenValue" conjunction="and" >
+          $oredCriteria[].criteriaWithBetweenValue[].condition$
+          #oredCriteria[].criteriaWithBetweenValue[].values[0]# and
+          #oredCriteria[].criteriaWithBetweenValue[].values[1]#
+        </iterate>
+        )
+      </isEqual>
+    </iterate>
+  </sql>
+  <select id="ibatorgenerated_selectByExample" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.openapi.vo.TGoodsExample" >
+    select id, short_name, goods_name, main_title, sub_title, generic_name, SKU_ID, goodsno, price,
+      cost_price, unit, weight, stock, integral, is_release, is_suit, type, spec, approval_number,
+      bar_code, manufacturer_id, dose_id, abbreviation_picture, brand_id, promotion_id, create_dt,
+      goodscode, good_alias, search_word, drug_code, pinyin
+    from t_goods
+    <isParameterPresent >
+      <include refid="t_goods.ibatorgenerated_Example_Where_Clause" />
+      <isNotNull property="orderByClause" >
+        order by $orderByClause$
+      </isNotNull>
+    </isParameterPresent>
+  </select>
+  <select id="ibatorgenerated_selectByPrimaryKey" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.openapi.vo.TGoods" >
+    select id, short_name, goods_name, main_title, sub_title, generic_name, SKU_ID, goodsno, price,
+      cost_price, unit, weight, stock, integral, is_release, is_suit, type, spec, approval_number,
+      bar_code, manufacturer_id, dose_id, abbreviation_picture, brand_id, promotion_id, create_dt,
+      goodscode, good_alias, search_word, drug_code, pinyin
+    from t_goods
+    where id = #id:BIGINT#
+  </select>
+  <delete id="ibatorgenerated_deleteByPrimaryKey" parameterClass="com.rc.openapi.vo.TGoods" >
+    delete from t_goods
+    where id = #id:BIGINT#
+  </delete>
+  <delete id="ibatorgenerated_deleteByExample" parameterClass="com.rc.openapi.vo.TGoodsExample" >
+    delete from t_goods
+    <include refid="t_goods.ibatorgenerated_Example_Where_Clause" />
+  </delete>
+  <insert id="ibatorgenerated_insert" parameterClass="com.rc.openapi.vo.TGoods" >
+    insert into t_goods (id, short_name, goods_name, main_title, sub_title, generic_name, SKU_ID,
+      goodsno, price, cost_price, unit, weight, stock, integral, is_release, is_suit, type, spec,
+      approval_number, bar_code, manufacturer_id, dose_id, abbreviation_picture, brand_id,
+      promotion_id, create_dt, goodscode, good_alias, search_word, drug_code, pinyin)
+    values (#id:BIGINT#, #shortName:VARCHAR#, #goodsName:VARCHAR#, #mainTitle:VARCHAR#,
+      #subTitle:VARCHAR#, #genericName:VARCHAR#, #skuId:VARCHAR#, #goodsno:VARCHAR#,
+      #price:DECIMAL#, #costPrice:DECIMAL#, #unit:VARCHAR#, #weight:DECIMAL#, #stock:BIGINT#,
+      #integral:BIGINT#, #isRelease:INTEGER#, #isSuit:INTEGER#, #type:INTEGER#, #spec:VARCHAR#,
+      #approvalNumber:VARCHAR#, #barCode:VARCHAR#, #manufacturerId:BIGINT#, #doseId:BIGINT#,
+      #abbreviationPicture:VARCHAR#, #brandId:BIGINT#, #promotionId:BIGINT#, #createDt:TIMESTAMP#,
+      #goodscode:VARCHAR#, #goodAlias:VARCHAR#, #searchWord:VARCHAR#, #drugCode:VARCHAR#,
+      #pinyin:VARCHAR#)
+	<selectKey resultClass="long" keyProperty="id"> 
+		select LAST_INSERT_ID()
+	</selectKey>
+  </insert>
+
+  <insert id="ibatorgenerated_insertSelective" parameterClass="com.rc.openapi.vo.TGoods" >
+    insert into t_goods
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        id
+      </isNotNull>
+      <isNotNull prepend="," property="shortName" >
+        short_name
+      </isNotNull>
+      <isNotNull prepend="," property="goodsName" >
+        goods_name
+      </isNotNull>
+      <isNotNull prepend="," property="mainTitle" >
+        main_title
+      </isNotNull>
+      <isNotNull prepend="," property="subTitle" >
+        sub_title
+      </isNotNull>
+      <isNotNull prepend="," property="genericName" >
+        generic_name
+      </isNotNull>
+      <isNotNull prepend="," property="skuId" >
+        SKU_ID
+      </isNotNull>
+      <isNotNull prepend="," property="goodsno" >
+        goodsno
+      </isNotNull>
+      <isNotNull prepend="," property="price" >
+        price
+      </isNotNull>
+      <isNotNull prepend="," property="costPrice" >
+        cost_price
+      </isNotNull>
+      <isNotNull prepend="," property="unit" >
+        unit
+      </isNotNull>
+      <isNotNull prepend="," property="weight" >
+        weight
+      </isNotNull>
+      <isNotNull prepend="," property="stock" >
+        stock
+      </isNotNull>
+      <isNotNull prepend="," property="integral" >
+        integral
+      </isNotNull>
+      <isNotNull prepend="," property="isRelease" >
+        is_release
+      </isNotNull>
+      <isNotNull prepend="," property="isSuit" >
+        is_suit
+      </isNotNull>
+      <isNotNull prepend="," property="type" >
+        type
+      </isNotNull>
+      <isNotNull prepend="," property="spec" >
+        spec
+      </isNotNull>
+      <isNotNull prepend="," property="approvalNumber" >
+        approval_number
+      </isNotNull>
+      <isNotNull prepend="," property="barCode" >
+        bar_code
+      </isNotNull>
+      <isNotNull prepend="," property="manufacturerId" >
+        manufacturer_id
+      </isNotNull>
+      <isNotNull prepend="," property="doseId" >
+        dose_id
+      </isNotNull>
+      <isNotNull prepend="," property="abbreviationPicture" >
+        abbreviation_picture
+      </isNotNull>
+      <isNotNull prepend="," property="brandId" >
+        brand_id
+      </isNotNull>
+      <isNotNull prepend="," property="promotionId" >
+        promotion_id
+      </isNotNull>
+      <isNotNull prepend="," property="createDt" >
+        create_dt
+      </isNotNull>
+      <isNotNull prepend="," property="goodscode" >
+        goodscode
+      </isNotNull>
+      <isNotNull prepend="," property="goodAlias" >
+        good_alias
+      </isNotNull>
+      <isNotNull prepend="," property="searchWord" >
+        search_word
+      </isNotNull>
+      <isNotNull prepend="," property="drugCode" >
+        drug_code
+      </isNotNull>
+      <isNotNull prepend="," property="pinyin" >
+        pinyin
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        #id:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="shortName" >
+        #shortName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="goodsName" >
+        #goodsName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="mainTitle" >
+        #mainTitle:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="subTitle" >
+        #subTitle:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="genericName" >
+        #genericName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="skuId" >
+        #skuId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="goodsno" >
+        #goodsno:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="price" >
+        #price:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="costPrice" >
+        #costPrice:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="unit" >
+        #unit:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="weight" >
+        #weight:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="stock" >
+        #stock:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="integral" >
+        #integral:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="isRelease" >
+        #isRelease:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="isSuit" >
+        #isSuit:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="type" >
+        #type:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="spec" >
+        #spec:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="approvalNumber" >
+        #approvalNumber:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="barCode" >
+        #barCode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="manufacturerId" >
+        #manufacturerId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="doseId" >
+        #doseId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="abbreviationPicture" >
+        #abbreviationPicture:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="brandId" >
+        #brandId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="promotionId" >
+        #promotionId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="createDt" >
+        #createDt:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="goodscode" >
+        #goodscode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="goodAlias" >
+        #goodAlias:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="searchWord" >
+        #searchWord:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="drugCode" >
+        #drugCode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="pinyin" >
+        #pinyin:VARCHAR#
+      </isNotNull>
+      )
+    </dynamic>
+	<selectKey resultClass="long" keyProperty="id"> 
+		select LAST_INSERT_ID()
+	</selectKey>
+  </insert>
+
+  <select id="ibatorgenerated_countByExample" parameterClass="com.rc.openapi.vo.TGoodsExample" resultClass="java.lang.Integer" >
+    select count(*) from t_goods
+    <include refid="t_goods.ibatorgenerated_Example_Where_Clause" />
+  </select>
+  <update id="ibatorgenerated_updateByExampleSelective" >
+    update t_goods
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="record.id" >
+        id = #record.id:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.shortName" >
+        short_name = #record.shortName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.goodsName" >
+        goods_name = #record.goodsName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.mainTitle" >
+        main_title = #record.mainTitle:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.subTitle" >
+        sub_title = #record.subTitle:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.genericName" >
+        generic_name = #record.genericName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.skuId" >
+        SKU_ID = #record.skuId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.goodsno" >
+        goodsno = #record.goodsno:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.price" >
+        price = #record.price:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.costPrice" >
+        cost_price = #record.costPrice:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.unit" >
+        unit = #record.unit:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.weight" >
+        weight = #record.weight:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="record.stock" >
+        stock = #record.stock:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.integral" >
+        integral = #record.integral:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.isRelease" >
+        is_release = #record.isRelease:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.isSuit" >
+        is_suit = #record.isSuit:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.type" >
+        type = #record.type:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.spec" >
+        spec = #record.spec:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.approvalNumber" >
+        approval_number = #record.approvalNumber:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.barCode" >
+        bar_code = #record.barCode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.manufacturerId" >
+        manufacturer_id = #record.manufacturerId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.doseId" >
+        dose_id = #record.doseId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.abbreviationPicture" >
+        abbreviation_picture = #record.abbreviationPicture:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.brandId" >
+        brand_id = #record.brandId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.promotionId" >
+        promotion_id = #record.promotionId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.createDt" >
+        create_dt = #record.createDt:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="record.goodscode" >
+        goodscode = #record.goodscode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.goodAlias" >
+        good_alias = #record.goodAlias:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.searchWord" >
+        search_word = #record.searchWord:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.drugCode" >
+        drug_code = #record.drugCode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.pinyin" >
+        pinyin = #record.pinyin:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    <isParameterPresent >
+      <include refid="t_goods.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByExample" >
+    update t_goods
+    set id = #record.id:BIGINT#,
+      short_name = #record.shortName:VARCHAR#,
+      goods_name = #record.goodsName:VARCHAR#,
+      main_title = #record.mainTitle:VARCHAR#,
+      sub_title = #record.subTitle:VARCHAR#,
+      generic_name = #record.genericName:VARCHAR#,
+      SKU_ID = #record.skuId:VARCHAR#,
+      goodsno = #record.goodsno:VARCHAR#,
+      price = #record.price:DECIMAL#,
+      cost_price = #record.costPrice:DECIMAL#,
+      unit = #record.unit:VARCHAR#,
+      weight = #record.weight:DECIMAL#,
+      stock = #record.stock:BIGINT#,
+      integral = #record.integral:BIGINT#,
+      is_release = #record.isRelease:INTEGER#,
+      is_suit = #record.isSuit:INTEGER#,
+      type = #record.type:INTEGER#,
+      spec = #record.spec:VARCHAR#,
+      approval_number = #record.approvalNumber:VARCHAR#,
+      bar_code = #record.barCode:VARCHAR#,
+      manufacturer_id = #record.manufacturerId:BIGINT#,
+      dose_id = #record.doseId:BIGINT#,
+      abbreviation_picture = #record.abbreviationPicture:VARCHAR#,
+      brand_id = #record.brandId:BIGINT#,
+      promotion_id = #record.promotionId:BIGINT#,
+      create_dt = #record.createDt:TIMESTAMP#,
+      goodscode = #record.goodscode:VARCHAR#,
+      good_alias = #record.goodAlias:VARCHAR#,
+      search_word = #record.searchWord:VARCHAR#,
+      drug_code = #record.drugCode:VARCHAR#,
+      pinyin = #record.pinyin:VARCHAR#
+    <isParameterPresent >
+      <include refid="t_goods.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKeySelective" parameterClass="com.rc.openapi.vo.TGoods" >
+    update t_goods
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="shortName" >
+        short_name = #shortName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="goodsName" >
+        goods_name = #goodsName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="mainTitle" >
+        main_title = #mainTitle:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="subTitle" >
+        sub_title = #subTitle:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="genericName" >
+        generic_name = #genericName:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="skuId" >
+        SKU_ID = #skuId:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="goodsno" >
+        goodsno = #goodsno:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="price" >
+        price = #price:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="costPrice" >
+        cost_price = #costPrice:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="unit" >
+        unit = #unit:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="weight" >
+        weight = #weight:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="stock" >
+        stock = #stock:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="integral" >
+        integral = #integral:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="isRelease" >
+        is_release = #isRelease:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="isSuit" >
+        is_suit = #isSuit:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="type" >
+        type = #type:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="spec" >
+        spec = #spec:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="approvalNumber" >
+        approval_number = #approvalNumber:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="barCode" >
+        bar_code = #barCode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="manufacturerId" >
+        manufacturer_id = #manufacturerId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="doseId" >
+        dose_id = #doseId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="abbreviationPicture" >
+        abbreviation_picture = #abbreviationPicture:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="brandId" >
+        brand_id = #brandId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="promotionId" >
+        promotion_id = #promotionId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="createDt" >
+        create_dt = #createDt:TIMESTAMP#
+      </isNotNull>
+      <isNotNull prepend="," property="goodscode" >
+        goodscode = #goodscode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="goodAlias" >
+        good_alias = #goodAlias:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="searchWord" >
+        search_word = #searchWord:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="drugCode" >
+        drug_code = #drugCode:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="pinyin" >
+        pinyin = #pinyin:VARCHAR#
+      </isNotNull>
+    </dynamic>
+    where id = #id:BIGINT#
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKey" parameterClass="com.rc.openapi.vo.TGoods" >
+    update t_goods
+    set short_name = #shortName:VARCHAR#,
+      goods_name = #goodsName:VARCHAR#,
+      main_title = #mainTitle:VARCHAR#,
+      sub_title = #subTitle:VARCHAR#,
+      generic_name = #genericName:VARCHAR#,
+      SKU_ID = #skuId:VARCHAR#,
+      goodsno = #goodsno:VARCHAR#,
+      price = #price:DECIMAL#,
+      cost_price = #costPrice:DECIMAL#,
+      unit = #unit:VARCHAR#,
+      weight = #weight:DECIMAL#,
+      stock = #stock:BIGINT#,
+      integral = #integral:BIGINT#,
+      is_release = #isRelease:INTEGER#,
+      is_suit = #isSuit:INTEGER#,
+      type = #type:INTEGER#,
+      spec = #spec:VARCHAR#,
+      approval_number = #approvalNumber:VARCHAR#,
+      bar_code = #barCode:VARCHAR#,
+      manufacturer_id = #manufacturerId:BIGINT#,
+      dose_id = #doseId:BIGINT#,
+      abbreviation_picture = #abbreviationPicture:VARCHAR#,
+      brand_id = #brandId:BIGINT#,
+      promotion_id = #promotionId:BIGINT#,
+      create_dt = #createDt:TIMESTAMP#,
+      goodscode = #goodscode:VARCHAR#,
+      good_alias = #goodAlias:VARCHAR#,
+      search_word = #searchWord:VARCHAR#,
+      drug_code = #drugCode:VARCHAR#,
+      pinyin = #pinyin:VARCHAR#
+    where id = #id:BIGINT#
+  </update>
+  <select id="selectByExampleByPage" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.openapi.vo.TGoodsExample" >
+                    select id, short_name, goods_name, main_title, sub_title, generic_name, SKU_ID, goodsno, price,
+                      cost_price, unit, weight, stock, integral, is_release, is_suit, type, spec, approval_number,
+                      bar_code, manufacturer_id, dose_id, abbreviation_picture, brand_id, promotion_id, create_dt,
+                      goodscode, good_alias, search_word, drug_code, pinyin
+                    from t_goods
+                    <isParameterPresent >
+                      <include refid="t_goods.ibatorgenerated_Example_Where_Clause" />
+                      <isNotNull property="orderByClause" >
+                        order by $orderByClause$
+                      </isNotNull>
+                    </isParameterPresent>
+					limit $pageInfo.start$ ,$pageInfo.pageSize$
+  </select>
+  
+    <select id="selectGoodsByCartMemberid" resultMap="OrderGoodCart_BaseResultMap" parameterClass="java.util.Map">
+	SELECT
+	tg.id,
+	gp.price as app_price,
+	tg.goods_name,
+	tg.stock,
+	t.quantity,
+	tg.abbreviation_picture,
+	tg.spec,
+	tg.promotion_id,
+	t.if_premiums,
+	tg.brand_id,
+	 (select cg.categoryid from t_category_goods cg where cg.goodsid = tg.id and cg.type=2) as categoryid,
+	tg.weight,
+	gp.`status` as app_status,
+   tg.type
+	FROM
+	t_cart_item t,
+	t_cart t1,
+	t_goods tg,
+  t_goods_price gp
+	WHERE
+	t.cart_id = t1.id
+	AND t.goods_id = tg.id
+	AND t.is_selected = 1
+  AND t.goods_id = gp.goods_id
+  AND gp.platform_type='111yao'
+  AND gp.price_type='app'
+	<isNotNull property="memberId">
+		and t1.member_id =#memberId#
+	</isNotNull>
+	<isNotNull property="ifPremiums">
+		and t.if_premiums =#ifPremiums#
+	</isNotNull>
+  </select>
+  
+ <!-- <select id="select_product_category" resultMap="productVo" parameterClass="java.util.Map" >
+		SELECT CAST(d.id AS CHAR) as id,d.abbreviation_picture,d.short_name,truncate(d.app_price,2) as price,truncate(d.price,2) as market_price,
+			d.app_price / d.price as discount  
+		FROM t_goods d where d.app_price  &lt;  d.price and app_status=1 and d.stock  &gt; 0  and 
+		d.id in (SELECT goodsid FROM t_category_goods cg where cg.type=2 and cg.categoryid in (SELECT id FROM t_category where  id=#cId# or all_parent_id LIKE #cIdS# )) 
+		<isNotNull property="order" >
+                      $order$ 
+        </isNotNull>	
+		 limit $pageInfo.start$ ,$pageInfo.pageSize$	
+  </select>
+  <select id="selectCount" parameterClass="java.util.Map" resultClass="java.lang.Integer" >
+	SELECT count(0) from (
+      SELECT d.id  FROM
+	  t_goods d where d.app_price  &lt;  d.price and app_status=1 and d.stock  &gt; 0  and 
+	  d.id in (SELECT goodsid FROM t_category_goods cg where cg.type=2 and cg.categoryid in (SELECT id FROM t_category where  id=#cId# or all_parent_id LIKE #cIdS# ))
+	)a	
+  </select>  -->
+  
+  <select id="select_product_category" resultMap="productVo" parameterClass="java.util.Map" >
+		 
+		 SELECT CAST(d.id AS CHAR) as id,d.abbreviation_picture,d.short_name,truncate(gp.price,2) as price,truncate(d.price,2) as market_price,
+		 gp.price / d.price as discount,concat(d.type) AS type 
+		 FROM t_goods d
+		 RIGHT JOIN (SELECT  goodsid FROM t_category_goods cg  WHERE  cg.categoryid IN (SELECT id FROM t_category  WHERE id = #cId# OR all_parent_id LIKE #cIdS#) ) t ON d.id = t.goodsid
+         LEFT JOIN t_goods_price gp ON d.id=gp.goods_id 
+		 where gp.price  &lt;=   d.price and gp.status=1 and d.stock  &gt;  0 and gp.platform_type='111yao' and gp.price_type=#price_type:VARCHAR#
+		 and gp.is_show=1
+		 <isNotNull property="order" >
+                      $order$ 
+        </isNotNull>		
+		  LIMIT $pageInfo.start$,$pageInfo.end$
+  </select>
+   
+  <select id="selectCount" parameterClass="java.util.Map" resultClass="java.lang.Integer" >
+	SELECT count(d.id) 
+		FROM t_goods d
+		 RIGHT JOIN (SELECT  goodsid FROM t_category_goods cg  WHERE  cg.categoryid IN (SELECT id FROM t_category  WHERE id = #cId# OR all_parent_id LIKE #cIdS#) ) t ON d.id = t.goodsid
+         LEFT JOIN t_goods_price gp ON d.id=gp.goods_id 
+		 where gp.price  &lt;=   d.price and gp.status=1 and d.stock  &gt;  0 and gp.platform_type='111yao' and gp.price_type=#price_type:VARCHAR#
+		
+  </select> 
+  
+  
+  
+ <select id="select_product_brand" resultMap="productVo" parameterClass="java.util.Map" >
+		SELECT CAST(d.id AS CHAR) as id,d.abbreviation_picture,d.short_name,truncate(gp.price,2) as price,truncate(d.price,2) as market_price,
+			gp.price / d.price as discount,concat(d.type) AS type 
+		FROM t_goods d LEFT JOIN t_goods_price gp ON d.id=gp.goods_id  
+		where gp.price  &lt;=  d.price and gp.status=1 and d.stock  &gt; 0 and gp.platform_type='111yao' and gp.price_type='app'
+		    and  d.brand_id = #bId# 
+		<isNotNull property="order" >
+                      $order$ 
+        </isNotNull>	
+		 limit $pageInfo.start$ ,$pageInfo.pageSize$	
+  </select>
+  <select id="selectCount_brand" parameterClass="java.util.Map" resultClass="java.lang.Integer" >
+	SELECT count(0) from (
+      SELECT d.id  FROM t_goods d 
+      LEFT JOIN t_goods_price gp ON d.id=gp.goods_id 
+      where gp.price  &lt;=  d.price and gp.status=1 and d.stock  &gt; 0 and gp.platform_type='111yao' and gp.price_type='app' 
+		    and  d.brand_id = #bId# 
+		)a	
+  </select>	 
+  <select id="selectByPrimaryKeyForUpdate" resultClass="java.util.HashMap" parameterClass="java.util.Map" >
+    select id
+    from t_goods
+    where id = #id# for update
+  </select>
+  <update id="updateGoodStockById" parameterClass="java.util.Map" >
+      update t_goods t set t.stock = (t.stock-#quantity#) where t.id =#id#
+   </update>
+<select id="select_keyword_search" resultMap="goodsVO"  parameterClass="java.util.Map" >
+		SELECT d.short_name 
+		FROM
+			t_goods d
+			LEFT JOIN t_goods_price gp  ON gp.`goods_id` = d.`id` and gp.price_type='app' AND gp.platform_type='111yao' 
+		WHERE
+			gp.status=1 and d.stock  &gt; 0 
+			and d.short_name LIKE $likekeyword$ 
+             order by gp.is_top desc
+		 limit $pageNo$ , $pageSize$	
+  </select>  
+   
+  
+
+  <select id="select_recommend_product" resultClass="java.util.HashMap" parameterClass="java.util.Map" >
+SELECT tg.id as pid, 
+       tg.abbreviation_picture AS image, 
+       CAST(truncate(gp.price,2) AS CHAR) as price,
+       tg.short_name as name,
+				SUBSTRING((CAST(TRUNCATE((gp.price/tg.price),1) AS CHAR)), 3) AS zk
+FROM t_goods AS tg 
+LEFT JOIN t_goods_property AS tgp 
+ON tg.id = tgp.goodsid 
+LEFT JOIN t_goods_price gp 
+   			ON gp.`goods_id` = tg.`id` and gp.price_type='app' AND gp.platform_type='111yao' 
+where tg.stock > 0
+ORDER BY tgp.sales 
+DESC LIMIT 10
+</select>
+
+	<select id="select_product_Info" resultClass="com.rc.openapi.model.ProductInfo"  parameterClass="java.util.Map" >
+			SELECT tg.id as pid,tg.short_name as name,gp.price as price, 
+			tg.price as marketPrice,tg.type as isPrescription,
+			substring((CAST(truncate((gp.price/tg.price),1) AS CHAR)), 3) as zk,
+			tg.spec as guige
+			from t_goods as tg 
+			LEFT JOIN t_goods_price gp 
+   			ON gp.`goods_id` = tg.`id` and gp.price_type='app' AND gp.platform_type='111yao' 
+			WHERE tg.id  = #goodsid# and gp.status=1
+		</select>
+		  <select id="select_goods_promotion" resultClass="java.util.HashMap" parameterClass="java.util.Map" >
+			SELECT tp.name from t_goods as tg LEFT JOIN t_promotion as tp ON tg.promotion_id = tp.id where tg.id = #goodsid#
+		</select>
+		
+		<select id="selectGoodsPriceById" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+			SELECT tg.id,
+		 gp.price as wap_price,
+		 gp1.price as pc_price,
+		 gp2.price as app_price
+		 FROM t_goods as tg 
+		 LEFT JOIN t_goods_price gp 
+   	     ON gp.`goods_id` = tg.`id` and gp.price_type='wap'  AND gp.platform_type='111yao' 
+         LEFT JOIN t_goods_price gp1 
+   	     ON gp1.`goods_id` = tg.`id` and gp1.price_type='pc'  AND gp1.platform_type='111yao' 
+   	     LEFT JOIN t_goods_price gp2 
+   	     ON gp2.`goods_id` = tg.`id` and gp2.price_type='app'  AND gp2.platform_type='111yao' 
+		 WHERE 1=1
+		 <isNotNull prepend="and" property="id">
+			tg.id = #id# 
+		 </isNotNull>
+			 
+	    </select>
+
+
+
+		<select id="selectGoodsSomeInfoById" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+			SELECT 
+			  g.id as id,
+			  g.`goodscode` as goodscode,
+			  g.`goods_name` as goodsName,
+			  gp.`price` as price,
+			  g.`abbreviation_picture` as imgUrl
+<!-- 			  gi.`artwork_url` as imgUrl -->
+			FROM
+			  t_goods g 
+			  LEFT JOIN t_goods_price gp 
+			    ON g.id = gp.`goods_id` 
+			    AND gp.`price_type` = 'app' 
+			  <!-- LEFT JOIN t_goods_images gi 
+			    ON g.`id` = gi.`goodsid` 
+			    AND gi.`user_type` = '3' -->
+			WHERE g.goodsno = #id# 
+			LIMIT 0,1
+		</select>
+
+
+		<!-- *********************以下SQL供PC、WAP站用***************** -->
+		<!-- 推荐商品 -->
+		<select id="select_recommend_product_new" resultClass="java.util.HashMap" parameterClass="java.util.Map" >
+			SELECT r.goods_id as pid, 
+			       g.abbreviation_picture AS image, 
+			       CAST(truncate(p.price,2) AS CHAR) as price,
+			       g.short_name as name,
+				   SUBSTRING((CAST(TRUNCATE((p.price/g.price),1) AS CHAR)), 3) AS zk,
+			       r.weight,
+			       IF((SELECT c.id AS cid FROM t_member_collect AS c WHERE c.relevance_id = g.id AND c.member_id = #memberId# limit 1) IS NULL, 0, 1) AS isc,
+	        	   g.price AS marketPrice
+			FROM t_goods_selling_rec_advertisement AS r 
+			LEFT JOIN t_goods AS g ON g.id = r.goods_id 
+			LEFT JOIN t_goods_price p ON p.goods_id = r.goods_id
+			WHERE 1 = 1 
+			<isNotNull property="price_type">
+			AND p.price_type = #price_type# 
+			</isNotNull>
+			AND p.platform_type = '111yao' 
+			AND g.stock > 0
+			<isNotNull property="platform_type">
+			AND r.platform_type = #platform_type#
+			</isNotNull>
+			ORDER BY r.weight DESC 
+		</select>
+
+		<!-- 搜索关键字联想 -->
+		<select id="select_keyword_search_for_wap_and_pc" resultMap="goodsVO"  parameterClass="java.util.Map">
+			SELECT
+				d.short_name
+			FROM
+				t_goods d
+			LEFT JOIN t_goods_price p ON p.goods_id = d.id
+			WHERE
+				1 = 1 
+			<isNotNull property="price_type">
+			AND p.price_type = #price_type#
+			</isNotNull>
+			AND p.platform_type = '111yao'
+			AND p.`status` = 1
+			AND d.stock > 0
+			AND d.short_name LIKE $likekeyword$
+			ORDER BY p.is_top DESC
+			LIMIT $pageNo$ , $pageSize$
+  		</select> 
+
+	    <!-- 获取同类别下的商品 -->
+		<select id="select_product_by_category_wap_pc" resultClass="java.util.HashMap" parameterClass="java.util.Map" >
+		  	SELECT
+				d.id,
+				d.abbreviation_picture,
+				d.short_name,
+				TRUNCATE (gp.price, 2) AS price,
+				TRUNCATE (d.price, 2) AS market_price,
+				FLOOR((gp.price / d.price) * 10) AS discount,
+				d.type
+			FROM t_goods d
+			LEFT JOIN t_goods_price gp ON gp.goods_id = d.id
+			RIGHT JOIN 
+			(
+				SELECT goodsid FROM t_category_goods cg WHERE cg.type = 2 AND cg.categoryid IN 
+			    (SELECT id FROM t_category WHERE id = #categoryid# OR all_parent_id LIKE '%,$categoryid$,%')
+			)  t ON d.id = t.goodsid
+			WHERE 1 =1 
+			<isNotNull property="price_type">
+				AND gp.price_type=#price_type# 
+			</isNotNull>
+			AND gp.platform_type='111yao' AND gp.`status`=1 AND gp.is_show=1 AND d.stock > 0
+		  	LIMIT $pageInfo.start$,$pageInfo.end$
+  		</select>
+  		<select id="select_product_count_by_category_wap_pc" parameterClass="java.util.Map" resultClass="java.lang.Integer" >
+	  		SELECT count(d.id)
+			FROM t_goods d
+			LEFT JOIN t_goods_price gp ON gp.goods_id=d.id
+			RIGHT JOIN (SELECT goodsid FROM t_category_goods cg WHERE cg.type = 2 
+							AND cg.categoryid IN  (SELECT id FROM t_category WHERE id = #categoryid# OR all_parent_id LIKE '%,$categoryid$,%')
+					   ) t ON d.id = t.goodsid
+			WHERE 1 = 1 
+			<isNotNull property="price_type">
+			AND gp.price_type=#price_type# 
+			</isNotNull>
+			AND gp.platform_type='111yao' AND gp.`status`=1 AND gp.is_show=1 AND d.stock > 0
+		
+  		</select> 
+  
+  		<!-- 用接口方式获取各平台商品价格 -->
+  		<select id="selectGoodsPriceById_all_platform" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+			 SELECT tg.id,
+			 gp.price as wap_price,
+			 gp1.price as pc_price,
+			 gp2.price as app_price
+			 FROM t_goods as tg 
+			 LEFT JOIN t_goods_price gp 
+	   	     ON gp.`goods_id` = tg.`id` and gp.price_type='wap'  AND gp.platform_type='111yao' 
+	         LEFT JOIN t_goods_price gp1 
+	   	     ON gp1.`goods_id` = tg.`id` and gp1.price_type='pc'  AND gp1.platform_type='111yao' 
+	   	     LEFT JOIN t_goods_price gp2 
+	   	     ON gp2.`goods_id` = tg.`id` and gp2.price_type='app'  AND gp2.platform_type='111yao' 
+			 WHERE 1=1
+			 <isNotNull prepend="and" property="id">
+				tg.id = #id# 
+			 </isNotNull>
+	    </select>
+
+
+</sqlMap>
+
+

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<methods>
+
+<!-- ws   -->
+		<method>
+			<name>getDistrictsInfoByIdService</name>
+			<uri>/URIService/getDistrictsInfoByIdService</uri>
+			<param>id,type</param>
+			<desc>根据地区id当作parentId获取下一级区域</desc>
+		</method>
+
+		<method>
+			<name>addReceiverAddress-V5</name>
+			<uri>/URIService/addReceiverAddress-V5</uri>
+			<param>sessionId,mobile,receiver,isDefault,areaId,citycode,cityName,longitude,latitude,locationAddress,address</param>
+			<desc>添加收获地址</desc>
+		</method>
+
+		<method>
+			<name>updateReceiverAddress-V5</name>
+			<uri>/URIService/updateReceiverAddress-V5</uri>
+			<param>id,sessionId,mobile,receiver,isDefault,areaId,citycode,cityName,longitude,latitude,locationAddress,address</param>
+			<desc>修改收获地址</desc>
+		</method>
+<!-- ws -->
+	<!-- WWF     Start -->
+	<method>
+		<name>SubmitOrderReturnService</name>
+		<uri>/URIService/SubmitOrderReturnService</uri>
+		<param></param>
+		<desc>退换货提交申请</desc>
+	</method>
+	<method>
+		<name>SubmitCommentService</name>
+		<uri>/URIService/SubmitCommentService</uri>
+		<param></param>
+		<desc>商品评论提交</desc>
+	</method>
+	<method>
+		<name>GetNoReturnGoodsService</name>
+		<uri>/URIService/GetNoReturnGoodsService</uri>
+		<param></param>
+		<desc>取未退换货的商品项</desc>
+	</method>
+	<method>
+		<name>GetOrderReturnService</name>
+		<uri>/URIService/GetOrderReturnService</uri>
+		<param></param>
+		<desc>我的售后</desc>
+	</method>
+	<!-- WWF    End -->
+	
+	<!-- Marlon Start-->
+	<method>
+		<name>orderDetailService</name>
+		<uri>/URIService/OrderDetailService</uri>
+		<param>order_id</param>
+		<desc>订单详情</desc>
+	</method>
+	
+	<method>
+		<name>commentCenterService</name>
+		<uri>/URIService/CommentCenterService</uri>
+		<param>order_id</param>
+		<desc>商品评论</desc>
+	</method>
+	<!-- Marlon End-->
+
+
+       <method>
+			<name>memberCenterService-V5</name>
+			<uri>/URIService/memberCenterService-V5</uri>
+			<param>sessionId</param>
+			<desc>用户中心V5</desc>
+		</method>
+
+        <method>
+			<name>receiverAddressSetDefaultService-V5</name>
+			<uri>/URIService/receiverAddressSetDefaultService-V5</uri>
+			<param>sessionId,receiverId</param>
+			<desc>设为默认地址V5</desc>
+		</method>
+		
+        <method>
+			<name>personalCenterOrderListService</name>
+			<uri>/URIService/PersonalCenterOrderListService</uri>
+			<param>sessionId,orderType,pageSize,page</param>
+			<desc>用户中心订单列表</desc>
+		</method>
+        <method>
+			<name>cancelOrderService</name>
+			<uri>/URIService/CancelOrderService</uri>
+			<param>sessionId,cancelType,orderid,cancleReason</param>
+			<desc>取消订单</desc>
+		</method>
+        <method>
+			<name>confirmOrderService</name>
+			<uri>/URIService/ConfirmOrderService</uri>
+			<param>sessionId,orderid</param>
+			<desc>确认收货</desc>
+		</method>
+        <method>
+			<name>newDeleteOrderService</name>
+			<uri>/URIService/NewDeleteOrderService</uri>
+			<param>sessionId,orderid</param>
+			<desc>删除订单</desc>
+		</method>
+    
+	</methods>
+</root>

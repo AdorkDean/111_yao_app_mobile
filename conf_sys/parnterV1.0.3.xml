@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<methods>
+<!-- 罗   -->
+		<method>
+			<name>gethomepageinfo-V3</name>
+			<uri>/URIService/gethomepageinfo-V3</uri>
+			<param>id</param>
+			<desc>新版首页详情接口</desc>
+		</method>
+		<method>
+			<name>gotopay-V3</name>
+			<uri>/URIService/gotopay-V3</uri>
+			<param>orderid,sessionid</param>
+			<desc>去支付页面</desc>
+		</method>
+<!-- 罗  -->
+
+	   <method>
+			<name>HealthCatetory</name>
+			<uri>/URIService/HealthCatetory</uri>
+			<param>jsoncallback,type,key</param>
+			<desc>健康分类接口</desc>
+		</method>
+		
+		<method>
+			<name>CartAddTaoURIService</name>
+			<uri>/URIService/CartAddTaoURIService</uri>
+			<param>sessionid,uuid,productid,count</param>
+			<desc>健康分类接口</desc>
+		</method>
+		
+		<method>
+			<name>OrderInit-V3</name>
+			<uri>/URIService/OrderInit</uri>
+			<param>sessionId,paymentMethodId,receiverId,couponCodeId,deliveryId</param>
+			<desc>结算页面初始化</desc>
+		</method>
+		<method>
+			<name>OrderCouponListInit-V3</name>
+			<uri>/URIService/OrderCouponListInit</uri>
+			<param>sessionId</param>
+			<desc>优惠卷列表初始化</desc>
+		</method>
+		<method>
+			<name>OrderPay-V3</name>
+			<uri>/URIService/OrderPayV3</uri>
+			<param>sessionId,orderId,paymentPluginId</param>
+			<desc>订单支付</desc>
+		</method>
+		<method>
+			<name>OrderSave-V3</name>
+			<uri>/URIService/OrderSaveV3</uri>
+			<param>sessionId,couponCodeId,receiverId,source,isInvoice,invoiceTitle,deliveryId,paymentmethodId,invoiceType,remark</param>
+			<desc>订单提交</desc>
+		</method>
+		<method>
+			<name>OrderCouponUser-V3</name>
+			<uri>/URIService/OrderCouponUser</uri>
+			<param>couponCardNo,sessionId</param>
+			<desc>检验优惠券编码是否可用</desc>
+		</method>
+		
+		<method>
+			<name>YktPay-V3</name>
+			<uri>/URIService/YktPay</uri>
+			<param>orderId,sessionId</param>
+			<desc>医卡通支付</desc>
+		</method>
+		
+		<method>
+			<name>OrderPayReturn-V3</name>
+			<uri>/URIService/OrderPayReturn</uri>
+			<param>支付回掉需要的相关参数</param>
+			<desc>支付同步回掉</desc>
+		</method>
+		
+		<method>
+			<name>OrderInfoURL-V3</name>
+			<uri>/URIService/OrderInfoURL-V3</uri>
+			<param>orderid</param>
+			<desc>订单详情页面</desc>
+		</method>
+		
+		<method>
+			<name>examineStart</name>
+			<uri>/URIService/ExamineStartService-V3</uri>
+			<param>version,type,sessionId</param>
+			<desc>开启检测接口</desc>
+		</method>
+		<method>
+			<name>OrderQueryResultService-V3</name>
+			<uri>/URIService/OrderQueryResultService-V3</uri>
+			<param>orderid,sessionId</param>
+			<desc>微信支付查询</desc>
+		</method>
+		
+		
+		
+		<!-- Wei -->
+		
+		<method>
+			<name>GetHomeNewInfoService-V3</name>
+			<uri>/URIService/GetHomeNewInfoService-V3</uri>
+			<param></param>
+			<desc>首页轮播六分类</desc>
+		</method>
+		<method>
+			<name>MoreClassifyURIService-V3</name>
+			<uri>/URIService/MoreClassifyURIService-V3</uri>
+			<param></param>
+			<desc>全部分类</desc>
+		</method>
+		<method>
+			<name>GetHomePageActivityService-V3</name>
+			<uri>/URIService/GetHomePageActivityService-V3</uri>
+			<param></param>
+			<desc>3.0首页活动</desc>
+		</method>
+		
+		
+		<method>
+			<name>AddReceiverAddressURIService-V3</name>
+			<uri>/URIService/AddReceiverAddressURIService-V3</uri>
+			<param>member_id,mobile,zipCode,receiver,isDefault,areaId,longitude,latitude,locationAddress,address</param>
+			<desc>3.0添加收货地址</desc>
+		</method>
+		
+		<method>
+			<name>DelReceiverAddressURIService-V3</name>
+			<uri>/URIService/DelReceiverAddressURIService-V3</uri>
+			<param>id</param>
+			<desc>3.0删除收货地址</desc>
+		</method>
+		<method>
+			<name>GetReceiverAddressByIdURIService-V3</name>
+			<uri>/URIService/GetReceiverAddressByIdURIService-V3</uri>
+			<param>member_id,id</param>
+			<desc>3.0根据id收货地址</desc>
+		</method>
+		<method>
+			<name>GetReceiverAddressURIService-V3</name>
+			<uri>/URIService/GetReceiverAddressURIService-V3</uri>
+			<param>member_id</param>
+			<desc>3.0根据sessionid查询收货地址</desc>
+		</method>
+		<method>
+			<name>UpdateReceiverAddressURIService-V3</name>
+			<uri>/URIService/UpdateReceiverAddressURIService-V3</uri>
+			<param>id,member_id,mobile,zipCode,receiver,isDefault,areaId,longitude,latitude,locationAddress,address</param>
+			<desc>3.0修改收货地址</desc>
+		</method>
+		<!-- Wei -->
+		<method>
+			<name>getUpAndDownNav-V3</name>
+			<uri>/URIService/getUpAndDownNav-V3</uri>
+			<param></param>
+			<desc>3.0首页头部底部导航</desc>
+		</method>
+		<method>
+			<name>getMemberCoupon</name>
+			<uri>/URIService/getMemberCoupon</uri>
+			<param></param>
+			<desc>用户领劵列表</desc>
+		</method>
+		<method>
+		<name>getEverydayCoupon</name>
+			<uri>/URIService/getEverydayCoupon</uri>
+			<param></param>
+			<desc>用户每日领劵</desc>
+		</method>
+
+		<method>
+			<name>shortcutMobile</name>
+			<uri>/URIService/shortcutMobile</uri>
+			<param>mobile</param>
+			<desc>手机快捷登录发送验证码</desc>
+		</method>
+		<method>
+		    <name>shortcutLogin</name>
+			<uri>/URIService/shortcutLogin</uri>
+			<param>mobile,code</param>
+			<desc>手机快捷登录</desc>
+		</method>	
+		<method>
+		    <name>countpricefrom</name>
+			<uri>/URIService/countpricefrom</uri>
+			<param>params</param>
+			<desc>专题页获取商品价格</desc>
+		</method>
+		<method>
+		    <name>storeOrder</name>
+			<uri>/URIService/storeOrder</uri>
+			<param>session,pageNo,pageSize</param>
+			<desc>门店订单</desc>
+		</method>
+		<method>
+		    <name>WXLogin</name>
+			<uri>/URIService/WXLogin</uri>
+			<param>uid,uidType,source,username,imgUrl</param>
+			<desc>微信联合登录</desc>
+		</method>																	
+		
+		<method>
+		    <name>couponlistservice</name>
+			<uri>/URIService/couponlistservice</uri>
+			<param>sessionId,pageNo,pageSize</param>
+			<desc>兑换优惠券列表</desc>
+		</method>		
+		
+		<method>
+		    <name>membercenterservice</name>
+			<uri>/URIService/membercenterservice</uri>
+			<param>sessionId</param>
+			<desc>用户中心接口</desc>
+		</method>		
+		<method>
+		    <name>memberonlinepointlistservice</name>
+			<uri>/URIService/memberonlinepointlistservice</uri>
+			<param>sessionId,pageNo,pageSize</param>
+			<desc>线上积分消费列表</desc>
+		</method>	
+		
+		<method>
+		    <name>memberofflinepointlistservice</name>
+			<uri>/URIService/memberofflinepointlistservice</uri>
+			<param>sessionId,pageNo,pageSize</param>
+			<desc>线下积分消费列表</desc>
+		</method>
+		
+		<method>
+		    <name>memberpointlistservice</name>
+			<uri>/URIService/memberpointlistservice</uri>
+			<param>sessionId</param>
+			<desc>用户积分中心列表 </desc>
+		</method>	
+		<method>
+		    <name>storeOrderInfo</name>
+			<uri>/URIService/storeOrderInfo</uri>
+			<param>sessionId</param>
+			<desc>门店订单详情 </desc>
+		</method>
+		<method>
+		    <name>exchangeCoupon</name>
+			<uri>/URIService/exchangeCoupon</uri>
+			<param>sessionId,couponId</param>
+			<desc>积分兑换优惠劵 </desc>
+		</method>	
+		<method>
+		    <name>comment</name>
+			<uri>/URIService/comment</uri>
+			<param>sessionId,orderSn</param>
+			<desc>跳转评论 </desc>
+		</method>	
+		<method>
+		    <name>storeOrderComment</name>
+			<uri>/URIService/storeOrderComment</uri>
+			<param>sessionId,orderSn</param>
+			<desc>订单评论 </desc>
+		</method>
+		<method>
+		    <name>isStockNotNull</name>
+			<uri>/URIService/isStockNotNull</uri>
+			<param>id</param>
+			<desc>判断商品是否有库存</desc>
+		</method>
+
+		<method>
+		    <name>YDF</name>
+			<uri>/URIService/YDF</uri>
+			<param>sessionId</param>
+			<desc>跳转壹大夫</desc>
+		</method>								
+	</methods>
+</root>

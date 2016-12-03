@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<methods>
+		<method>
+			<name>getRecommendGoods</name>
+			<uri>/URIService/getRecommendGoods</uri>
+			<param>platform_type,memberId</param>
+			<desc>获取推荐商品</desc>
+		</method>
+		
+		<method>
+			<name>getKeyWordTip</name>
+			<uri>/URIService/getKeyWordTip</uri>
+			<param>keyword,price_type</param>
+			<desc>关键字联想</desc>
+		</method>
+		
+		<method>
+			<name>getSearchResult</name>
+			<uri>/URIService/getSearchResult</uri>
+			<param>keyword,from,ptype</param>
+			<desc>关键字搜索</desc>
+		</method>
+		
+		<method>
+			<name>getProductCategory</name>
+			<uri>/URIService/getProductCategory</uri>
+			<param>pid,dataType</param>
+			<desc>获取商品分类、一级、二级、三级</desc>
+		</method>
+		
+		<method>
+			<name>getSubProductCategory</name>
+			<uri>/URIService/getSubProductCategory</uri>
+			<param>pid,dataType</param>
+			<desc>获取商品子分类</desc>
+		</method>
+		
+		<method>
+			<name>getCategoryProductInfo</name>
+			<uri>/URIService/getCategoryProductInfo</uri>
+			<param>cid,dataType</param>
+			<desc>获取分类下的商品</desc>
+		</method>
+		
+		<method>
+			<name>getProductByCategory</name>
+			<uri>/URIService/getProductByCategory</uri>
+			<param>cid,dataType</param>
+			<desc>健康照顾方案获取分类下的商品</desc>
+		</method>
+		
+		<method>
+			<name>getPriceByFlatform</name>
+			<uri>/URIService/getPriceByFlatform</uri>
+			<param>params,dataType</param>
+			<desc>获取不同平台商品价格</desc>
+		</method>
+		
+		<method>
+			<name>addGoodsToCartByLGP</name>
+			<uri>/URIService/addGoodsToCartByLGP</uri>
+			<param>sessionid,uuid,productid,count,flag</param>
+			<desc>获取不同平台商品价格</desc>
+		</method>
+		
+	</methods>
+</root>

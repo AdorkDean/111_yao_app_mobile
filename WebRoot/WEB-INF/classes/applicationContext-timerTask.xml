@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+
+<!-- 
+	 <bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="order24_dotime"/>
+			</list>
+		</property> 
+	</bean>
+ 
+	 <bean id="order24Task" class="com.rc.portal.task.SystemTask">
+		<property name="opensqlmanage" ref="opensqlmanage"></property>
+		<property name="systemtaskmanager" ref="systemtaskmanager"></property>
+	</bean>	
+	 <bean id="order24" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="order24Task"></property>
+		<property name="targetMethod" value="cancelDueOrder"></property>
+	</bean>
+	<bean id="order24_dotime" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="order24"></property>
+		<property name="cronExpression" value="0 */10 * * * ?"></property>
+	</bean>
+	
+	 -->
+</beans>

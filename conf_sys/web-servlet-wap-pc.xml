@@ -1,0 +1,110 @@
+<!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ByLGP↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↑ -->
+<!-- 推荐商品 -->
+<servlet>
+	<servlet-name>RecommendGoodsService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriWapPc.RecommendGoodsService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>RecommendGoodsService</servlet-name>
+	<url-pattern>/URIService/getRecommendGoods</url-pattern>
+</servlet-mapping>
+
+<!-- 关键字联想 -->
+<servlet>
+	<servlet-name>KeyWordTipService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriWapPc.KeyWordTipService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>KeyWordTipService</servlet-name>
+	<url-pattern>/URIService/getKeyWordTip</url-pattern>
+</servlet-mapping>
+
+<!-- 关键字搜索 -->
+<servlet>
+	<servlet-name>SearchService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriWapPc.SearchService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>SearchService</servlet-name>
+	<url-pattern>/URIService/getSearchResult</url-pattern>
+</servlet-mapping>
+
+<!-- 获取商品分类 -->
+<servlet>
+	<servlet-name>GetProductCategoryService_WapPc</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriWapPc.GetProductCategoryService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetProductCategoryService_WapPc</servlet-name>
+	<url-pattern>/URIService/getProductCategory</url-pattern>
+</servlet-mapping>
+
+<!-- 获取商品子分类 -->
+<servlet>
+	<servlet-name>GetSubProductCategoryService_WapPc</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriWapPc.GetSubProductCategoryService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetSubProductCategoryService_WapPc</servlet-name>
+	<url-pattern>/URIService/getSubProductCategory</url-pattern>
+</servlet-mapping>
+
+<!-- 获取某分类下的商品 -->
+<servlet>
+	<servlet-name>GetCategoryProductService_WapPc</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriWapPc.GetCategoryProductService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetCategoryProductService_WapPc</servlet-name>
+	<url-pattern>/URIService/getCategoryProductInfo</url-pattern>
+</servlet-mapping>
+
+<!-- 健康照顾方案获取某分类下的商品 -->
+<servlet>
+	<servlet-name>GetProductByCategoryService_WapPc</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriWapPc.GetProductByCategoryService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetProductByCategoryService_WapPc</servlet-name>
+	<url-pattern>/URIService/getProductByCategory</url-pattern>
+</servlet-mapping>
+
+<!-- 获取不同平台商品价格 -->
+<servlet>
+	<servlet-name>GetPriceByFlatformService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriWapPc.GetPriceByFlatformService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetPriceByFlatformService</servlet-name>
+	<url-pattern>/URIService/getPriceByFlatform</url-pattern>
+</servlet-mapping>
+
+<!-- 单品或套餐商品加入购物车 -->
+<servlet>
+	<servlet-name>AddGoodsToCartByLGPService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriWapPc.AddGoodsToCartService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>AddGoodsToCartByLGPService</servlet-name>
+	<url-pattern>/URIService/addGoodsToCartByLGP</url-pattern>
+</servlet-mapping>
+
+<!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->

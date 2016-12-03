@@ -1,0 +1,193 @@
+<!-- ======================================== ws ===========================================-->
+<servlet>
+	<servlet-name>GetDistrictsInfoByIdService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV5.receiver.GetDistrictsInfoByIdService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetDistrictsInfoByIdService</servlet-name>
+	<url-pattern>/URIService/getDistrictsInfoByIdService</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>AddReceiverAddressURIService-V5</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV5.receiver.AddReceiverAddressURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>AddReceiverAddressURIService-V5</servlet-name>
+	<url-pattern>/URIService/addReceiverAddress-V5</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>UpdateReceiverAddressURIService-V5</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV5.receiver.UpdateReceiverAddressURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>UpdateReceiverAddressURIService-V5</servlet-name>
+	<url-pattern>/URIService/updateReceiverAddress-V5</url-pattern>
+</servlet-mapping>
+
+<!-- ======================================== /ws ===========================================-->
+
+<!-- 会员中心V5接口 开始 -->
+<servlet>
+	<servlet-name>MemberCenterService-V5</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV5.memberCenter.MemberCenterService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>MemberCenterService-V5</servlet-name>
+	<url-pattern>/URIService/memberCenterService-V5</url-pattern>
+</servlet-mapping>
+<!-- 会员中心V5接口  结束-->
+
+<!-- 设为默认地址V5接口  结束-->
+<servlet>
+	<servlet-name>ReceiverAddressSetDefaultService-V5</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV5.receiver.ReceiverAddressSetDefaultService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>ReceiverAddressSetDefaultService-V5</servlet-name>
+	<url-pattern>/URIService/receiverAddressSetDefaultService-V5</url-pattern>
+</servlet-mapping>
+<!-- 设为默认地址V5接口  结束-->
+
+
+
+<!-- WWF     Start -->
+
+<servlet>
+	<servlet-name>SubmitOrderReturnService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV5.order.SubmitOrderReturnService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>SubmitOrderReturnService</servlet-name>
+	<url-pattern>/URIService/SubmitOrderReturnService</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>SubmitCommentService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV5.order.SubmitCommentService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>SubmitCommentService</servlet-name>
+	<url-pattern>/URIService/SubmitCommentService</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>GetNoReturnGoodsService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV5.order.GetNoReturnGoodsService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetNoReturnGoodsService</servlet-name>
+	<url-pattern>/URIService/GetNoReturnGoodsService</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>GetOrderReturnService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV5.order.GetOrderReturnService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetOrderReturnService</servlet-name>
+	<url-pattern>/URIService/GetOrderReturnService</url-pattern>
+</servlet-mapping>
+
+<!-- WWF     End -->
+
+<!-- 会员中心订单列表     Start -->
+
+<servlet>
+	<servlet-name>PersonalCenterOrderListService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV5.order.PersonalCenterOrderListService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>PersonalCenterOrderListService</servlet-name>
+	<url-pattern>/URIService/PersonalCenterOrderListService</url-pattern>
+</servlet-mapping>
+
+<!--会员中心订单列表     End -->
+<!-- 取消订单     Start -->
+
+<servlet>
+	<servlet-name>CancelOrderService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV5.order.CancelOrderService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>CancelOrderService</servlet-name>
+	<url-pattern>/URIService/CancelOrderService</url-pattern>
+</servlet-mapping>
+
+<!-- 取消订单    End -->
+<!-- 订单确认收货     Start -->
+
+<servlet>
+	<servlet-name>ConfirmOrderService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV5.order.ConfirmOrderService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>ConfirmOrderService</servlet-name>
+	<url-pattern>/URIService/ConfirmOrderService</url-pattern>
+</servlet-mapping>
+
+<!-- 订单确认收货    End -->
+<!-- 订单删除    Start -->
+
+<servlet>
+	<servlet-name>NewDeleteOrderService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV5.order.NewDeleteOrderService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>NewDeleteOrderService</servlet-name>
+	<url-pattern>/URIService/NewDeleteOrderService</url-pattern>
+</servlet-mapping>
+
+<!-- 订单删除    End -->
+
+<!--  ****************Marlon start************* -->
+<servlet>
+	<servlet-name>OrderDetailService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV5.order.OrderDetailService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>OrderDetailService</servlet-name>
+	<url-pattern>/URIService/OrderDetailService</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>CommentCenterService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV5.order.CommentCenterService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>CommentCenterService</servlet-name>
+	<url-pattern>/URIService/CommentCenterService</url-pattern>
+</servlet-mapping>
+<!--  ****************Marlon end************* -->

@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--允许全屏-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+    <!--缩放比例-->
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--上线时请删除-->
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <!--上线时请删除-->
+    <title>领券专区</title>
+    <link href="./css/coupon_common.css" rel="stylesheet" type="text/css" />
+    <link href="./css/coupon_member-center.css" rel="stylesheet" type="text/css" />
+    <link href="./css/coupon_iconfont.css" rel="stylesheet" type="text/css" />
+    <script src="./js/jquery-1.7.2.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+<article class="get-coupon" id="coupon">
+    
+   
+</article>
+<div class="get-shade-bg">
+    <div class="get-shade-coupon">
+        <span class="get-shade-icon"></span>
+        <label for="" style="margin-bottom:7px;">领取成功!</label>
+        <label for="">感谢您的参与，祝您购物愉快</label>
+    </div>
+</div>
+<input type="hidden" id="phone_type" name="phone_type" value=""/></br>
+<input type="hidden" id="seid" name="sessionid"  value=""/></br>
+<input type="hidden" id="cs" name="cs"  value=""/></br>
+</body>
+<script>
+       var n = 0;
+	   var n1 = 0;
+       loadsys();
+       //common();
+       function getCoupon(id){
+        if($("#c_"+id).hasClass("get-already"))
+	    {
+		   return;
+	    }
+        var yu = "http://router.111yao.com";
+        //var yu = "http://192.168.100.28:8082/111_app_mobile";
+        var p = getPath();
+        isLogin(p);
+        var sessionid  = $('#seid').val();
+
+        var phone_type =  $('#phone_type').val();
+
+        if(phone_type=="android"){
+            if (typeof(sessionid) != "undefined" && sessionid!="undefined" && sessionid!="") {
+                $.post(yu+"/sltRouter?method=getEverydayCoupon", {couponId:id,sessionId:sessionid,random:Math.random()}, function(data){
+                    if(data=="1"){
+                         contact.toast("领取成功");
+                         $("#c_"+id).removeClass("get-down");
+                         $("#c_"+id).addClass("get-already");
+                         $("#x_"+id).html("已领");
+                    }else if(data=="2"){
+                        contact.toast("无效的用户参数");
+                    }else if(data=="3"){
+                        contact.toast("无效的优惠劵参数");
+                    }else if(data=="4"){
+                        contact.toast("非法用户");
+                    }else if(data=="5"){
+                        contact.toast("优惠劵不存在");
+                    }else if(data=="6"){
+                        contact.toast("已经领取过优惠劵");
+                    }else if(data=="7"){
+                        contact.toast("绑定失败");
+                    }else{
+                        contact.toast("系统错误");
+                    }
+                });
+            }
+        }else if(phone_type=="ios"){
+            if (sessionid!=null && sessionid!="(null)" && sessionid!="null" ){
+                $.post(yu+"/sltRouter?method=getEverydayCoupon", {couponId:id,sessionId:sessionid,random:Math.random()}, function(data){
+                    if(data=="1"){
+                        alert("领取成功");
+                         $("#c_"+id).removeClass("get-down");
+                         $("#c_"+id).addClass("get-already");
+                         $("#x_"+id).html("已领");
+                    }else if(data=="2"){
+                        alert("无效的用户参数");
+                    }else if(data=="3"){
+                        alert("无效的优惠劵参数");
+                    }else if(data=="4"){
+                        alert("非法用户");
+                    }else if(data=="5"){
+                        alert("优惠劵不存在");
+                    }else if(data=="6"){
+                        alert("已经领取过优惠劵");
+                    }else if(data=="7"){
+                        alert("绑定失败");
+                    }else{
+                        alert("系统错误");
+                    }
+                });
+            }
+        }
+    }
+    
+    
+    
+
+function getPath(){
+	var strUrl=window.location.href;
+	var arrUrl=strUrl.split(".com/");
+	var path = arrUrl[1];
+	return path;
+}
+
+
+function loadsys(){
+
+	
+	var u = navigator.userAgent, app = navigator.appVersion;
+	var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; 
+	var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); 
+	if(isAndroid){
+		contact.common();	
+		$('#phone_type').val("android");
+	}else if(isiOS){
+		document.location = +"?r="+(+new Date().getMilliseconds())+"type*1";
+		$('#phone_type').val("ios");
+	}else{
+		
+	}
+}
+
+
+function common(jsondata)
+{
+     n1 = n1+1;
+	 var json = JSON.parse(jsondata);
+     $('#seid').val(json.sessionid);
+     if(n1==1){
+       var sessionid  = $('#seid').val();
+       $.post("http://router.111yao.com/sltRouter?method=getMemberCoupon", {sessionId:sessionid,random:Math.random()}, function(data){
+         $('#coupon').html("");
+        var json=jQuery.parseJSON(data);
+        var str ="";
+        for(var i=0; i<json.length; i++)  { 
+            isget = json[i].isget;
+            cl = "get-down";
+            cln = "领劵"
+            name =  json[i].name;
+            start_time = json[i].start_time.substring(0,10);
+            end_time = json[i].end_time.substring(0,10);
+            dis_price = json[i].dis_price;
+            id=json[i].id;
+            getcoupon="onclick='getCoupon("+id+")'";
+            if(isget>0){
+                cl = "get-already";
+                cln= "已领";
+                getcoupon = "";
+            }
+            str+="<div class='get-coupon-part "+cl+"'  id='c_"+id+"'><div class='get-coupon-details'><label for=''>"+name+"</label><label for=''>有效期："+start_time+" 至 "+end_time+"</label></div><div class='get-coupon-num' "+getcoupon+" id='o_"+id+"'><label style='font-size:30px;'><b>￥</b>"+dis_price+"</label><label style='font-size:12px; margin-bottom:5px;'>活动券</label><label style='font-size:15px;'><span id='x_"+id+"'>"+cln+"</span></label></div></div>"
+  		} 
+  		$('#coupon') .append(str);
+       });
+     }
+}
+
+
+function isLogin(backpath){
+
+
+	var sessionid =  $('#seid').val();
+	var phone_type =  $('#phone_type').val();
+	if(phone_type=="android"){
+   	    contact.common();	
+    }else if(phone_type=="ios"){
+		n = setInterval("requestIOS();",0);		
+    }	
+	
+	
+	
+	var phone_type =  $('#phone_type').val();
+	if(phone_type=="android"){
+   	  if (typeof(sessionid) == "undefined" || sessionid=="undefined" || sessionid=="") { 
+   		   contact.login(backpath);
+	  }  
+		 
+    }else if(phone_type=="ios"){
+    	if (sessionid==null || sessionid=="(null)" || sessionid=="null" )
+		{ 
+   			document.location = "type*2";
+		}
+    }
+}
+
+
+
+function requestIOS(){
+	document.location = "type*1";
+    
+	var sessionid =  $('#seid').val();
+	if (sessionid==null || sessionid=="(null)" || sessionid=="null" )
+	{ 
+		
+	}else{
+		clearInterval(n);
+		if(n==1){
+		    var sessionid  = $('#seid').val();
+            $.post("http://router.111yao.com/sltRouter?method=getMemberCoupon", {sessionId:sessionid,random:Math.random()}, function(data){
+	        $('#coupon').html("");
+	        var json=jQuery.parseJSON(data);
+	        var str ="";
+	        for(var i=0; i<json.length; i++)  { 
+	            isget = json[i].isget;
+	            cl = "get-down";
+	            cln = "领劵"
+	            name =  json[i].name;
+				start_time = json[i].start_time.substring(0,10);
+                end_time = json[i].end_time.substring(0,10);
+	            dis_price = json[i].dis_price;
+	            id=json[i].id;
+	            getcoupon="onclick='getCoupon("+id+")'";
+	            if(isget>0){
+	                cl = "get-already";
+	                cln= "已领";
+	                getcoupon = "";
+	            }
+	            str+="<div class='get-coupon-part "+cl+"'  id='c_"+id+"'><div class='get-coupon-details'><label for=''>"+name+"</label><label for=''>有效期："+start_time+" 至 "+end_time+"</label></div><div class='get-coupon-num' "+getcoupon+" id='o_"+id+"'><label style='font-size:30px;'><b>￥</b>"+dis_price+"</label><label style='font-size:12px; margin-bottom:5px;'>活动券</label><label style='font-size:15px;'><span id='x_"+id+"'>"+cln+"</span></label></div></div>"
+	  		} 
+	  		$('#coupon') .append(str);
+	       	});
+		}
+	}
+
+	
+}
+  
+  
+    
+</script>
+</html>

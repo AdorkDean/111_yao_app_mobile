@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="t_goods_comment" >
+  <resultMap id="ibatorgenerated_BaseResultMap" class="com.rc.openapi.vo.TGoodsComment" >
+    <result column="id" property="id" jdbcType="BIGINT" />
+    <result column="sum_fraction" property="sumFraction" jdbcType="INTEGER" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="seller" property="seller" jdbcType="INTEGER" />
+    <result column="fast_mail" property="fastMail" jdbcType="INTEGER" />
+    <result column="goods" property="goods" jdbcType="INTEGER" />
+    <result column="fast_mail_people" property="fastMailPeople" jdbcType="INTEGER" />
+    <result column="is_show" property="isShow" jdbcType="INTEGER" />
+    <result column="comment" property="comment" jdbcType="VARCHAR" />
+    <result column="member_id" property="memberId" jdbcType="BIGINT" />
+    <result column="goods_id" property="goodsId" jdbcType="BIGINT" />
+    <result column="order_id" property="orderId" jdbcType="BIGINT" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="ibatorgenerated_Example_Where_Clause" >
+    <iterate property="oredCriteria" conjunction="or" prepend="where" removeFirstPrepend="iterate" >
+      <isEqual property="oredCriteria[].valid" compareValue="true" >
+        (
+        <iterate prepend="and" property="oredCriteria[].criteriaWithoutValue" conjunction="and" >
+          $oredCriteria[].criteriaWithoutValue[]$
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithSingleValue" conjunction="and" >
+          $oredCriteria[].criteriaWithSingleValue[].condition$
+            #oredCriteria[].criteriaWithSingleValue[].value#
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithListValue" conjunction="and" >
+          $oredCriteria[].criteriaWithListValue[].condition$
+          <iterate property="oredCriteria[].criteriaWithListValue[].values" open="(" close=")" conjunction="," >
+            #oredCriteria[].criteriaWithListValue[].values[]#
+          </iterate>
+        </iterate>
+        <iterate prepend="and" property="oredCriteria[].criteriaWithBetweenValue" conjunction="and" >
+          $oredCriteria[].criteriaWithBetweenValue[].condition$
+          #oredCriteria[].criteriaWithBetweenValue[].values[0]# and
+          #oredCriteria[].criteriaWithBetweenValue[].values[1]#
+        </iterate>
+        )
+      </isEqual>
+    </iterate>
+  </sql>
+  <select id="ibatorgenerated_selectByExample" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.openapi.vo.TGoodsCommentExample" >
+    select id, sum_fraction, type, seller, fast_mail, goods, fast_mail_people, is_show, comment,
+      member_id, goods_id, order_id, create_time
+    from t_goods_comment
+    <isParameterPresent >
+      <include refid="t_goods_comment.ibatorgenerated_Example_Where_Clause" />
+      <isNotNull property="orderByClause" >
+        order by $orderByClause$
+      </isNotNull>
+    </isParameterPresent>
+  </select>
+  <select id="ibatorgenerated_selectByPrimaryKey" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.openapi.vo.TGoodsComment" >
+    select id, sum_fraction, type, seller, fast_mail, goods, fast_mail_people, is_show, comment,
+      member_id, goods_id, order_id, create_time
+    from t_goods_comment
+    where id = #id:BIGINT#
+  </select>
+  <delete id="ibatorgenerated_deleteByPrimaryKey" parameterClass="com.rc.openapi.vo.TGoodsComment" >
+    delete from t_goods_comment
+    where id = #id:BIGINT#
+  </delete>
+  <delete id="ibatorgenerated_deleteByExample" parameterClass="com.rc.openapi.vo.TGoodsCommentExample" >
+    delete from t_goods_comment
+    <include refid="t_goods_comment.ibatorgenerated_Example_Where_Clause" />
+  </delete>
+  <insert id="ibatorgenerated_insert" parameterClass="com.rc.openapi.vo.TGoodsComment" >
+    insert into t_goods_comment (id, sum_fraction, type, seller, fast_mail, goods, fast_mail_people,
+      is_show, comment, member_id, goods_id, order_id, create_time)
+    values (#id:BIGINT#, #sumFraction:INTEGER#, #type:INTEGER#, #seller:INTEGER#,
+      #fastMail:INTEGER#, #goods:INTEGER#, #fastMailPeople:INTEGER#, #isShow:INTEGER#,
+      #comment:VARCHAR#, #memberId:BIGINT#, #goodsId:BIGINT#, #orderId:BIGINT#,
+      #createTime:TIMESTAMP#)
+	<selectKey resultClass="long" keyProperty="id"> 
+		select LAST_INSERT_ID()
+	</selectKey>
+  </insert>
+
+  <insert id="ibatorgenerated_insertSelective" parameterClass="com.rc.openapi.vo.TGoodsComment" >
+    insert into t_goods_comment
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        id
+      </isNotNull>
+      <isNotNull prepend="," property="sumFraction" >
+        sum_fraction
+      </isNotNull>
+      <isNotNull prepend="," property="type" >
+        type
+      </isNotNull>
+      <isNotNull prepend="," property="seller" >
+        seller
+      </isNotNull>
+      <isNotNull prepend="," property="fastMail" >
+        fast_mail
+      </isNotNull>
+      <isNotNull prepend="," property="goods" >
+        goods
+      </isNotNull>
+      <isNotNull prepend="," property="fastMailPeople" >
+        fast_mail_people
+      </isNotNull>
+      <isNotNull prepend="," property="isShow" >
+        is_show
+      </isNotNull>
+      <isNotNull prepend="," property="comment" >
+        comment
+      </isNotNull>
+      <isNotNull prepend="," property="memberId" >
+        member_id
+      </isNotNull>
+      <isNotNull prepend="," property="goodsId" >
+        goods_id
+      </isNotNull>
+      <isNotNull prepend="," property="orderId" >
+        order_id
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        create_time
+      </isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(" >
+      <isNotNull prepend="," property="id" >
+        #id:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="sumFraction" >
+        #sumFraction:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="type" >
+        #type:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="seller" >
+        #seller:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="fastMail" >
+        #fastMail:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="goods" >
+        #goods:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="fastMailPeople" >
+        #fastMailPeople:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="isShow" >
+        #isShow:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="comment" >
+        #comment:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="memberId" >
+        #memberId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="goodsId" >
+        #goodsId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="orderId" >
+        #orderId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        #createTime:TIMESTAMP#
+      </isNotNull>
+      )
+    </dynamic>
+	<selectKey resultClass="long" keyProperty="id"> 
+		select LAST_INSERT_ID()
+	</selectKey>
+  </insert>
+
+  <select id="ibatorgenerated_countByExample" parameterClass="com.rc.openapi.vo.TGoodsCommentExample" resultClass="java.lang.Integer" >
+    select count(*) from t_goods_comment
+    <include refid="t_goods_comment.ibatorgenerated_Example_Where_Clause" />
+  </select>
+  <update id="ibatorgenerated_updateByExampleSelective" >
+    update t_goods_comment
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="record.id" >
+        id = #record.id:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.sumFraction" >
+        sum_fraction = #record.sumFraction:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.type" >
+        type = #record.type:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.seller" >
+        seller = #record.seller:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.fastMail" >
+        fast_mail = #record.fastMail:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.goods" >
+        goods = #record.goods:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.fastMailPeople" >
+        fast_mail_people = #record.fastMailPeople:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.isShow" >
+        is_show = #record.isShow:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="record.comment" >
+        comment = #record.comment:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="record.memberId" >
+        member_id = #record.memberId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.goodsId" >
+        goods_id = #record.goodsId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.orderId" >
+        order_id = #record.orderId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="record.createTime" >
+        create_time = #record.createTime:TIMESTAMP#
+      </isNotNull>
+    </dynamic>
+    <isParameterPresent >
+      <include refid="t_goods_comment.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByExample" >
+    update t_goods_comment
+    set id = #record.id:BIGINT#,
+      sum_fraction = #record.sumFraction:INTEGER#,
+      type = #record.type:INTEGER#,
+      seller = #record.seller:INTEGER#,
+      fast_mail = #record.fastMail:INTEGER#,
+      goods = #record.goods:INTEGER#,
+      fast_mail_people = #record.fastMailPeople:INTEGER#,
+      is_show = #record.isShow:INTEGER#,
+      comment = #record.comment:VARCHAR#,
+      member_id = #record.memberId:BIGINT#,
+      goods_id = #record.goodsId:BIGINT#,
+      order_id = #record.orderId:BIGINT#,
+      create_time = #record.createTime:TIMESTAMP#
+    <isParameterPresent >
+      <include refid="t_goods_comment.ibatorgenerated_Example_Where_Clause" />
+    </isParameterPresent>
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKeySelective" parameterClass="com.rc.openapi.vo.TGoodsComment" >
+    update t_goods_comment
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="sumFraction" >
+        sum_fraction = #sumFraction:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="type" >
+        type = #type:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="seller" >
+        seller = #seller:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="fastMail" >
+        fast_mail = #fastMail:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="goods" >
+        goods = #goods:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="fastMailPeople" >
+        fast_mail_people = #fastMailPeople:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="isShow" >
+        is_show = #isShow:INTEGER#
+      </isNotNull>
+      <isNotNull prepend="," property="comment" >
+        comment = #comment:VARCHAR#
+      </isNotNull>
+      <isNotNull prepend="," property="memberId" >
+        member_id = #memberId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="goodsId" >
+        goods_id = #goodsId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="orderId" >
+        order_id = #orderId:BIGINT#
+      </isNotNull>
+      <isNotNull prepend="," property="createTime" >
+        create_time = #createTime:TIMESTAMP#
+      </isNotNull>
+    </dynamic>
+    where id = #id:BIGINT#
+  </update>
+  <update id="ibatorgenerated_updateByPrimaryKey" parameterClass="com.rc.openapi.vo.TGoodsComment" >
+    update t_goods_comment
+    set sum_fraction = #sumFraction:INTEGER#,
+      type = #type:INTEGER#,
+      seller = #seller:INTEGER#,
+      fast_mail = #fastMail:INTEGER#,
+      goods = #goods:INTEGER#,
+      fast_mail_people = #fastMailPeople:INTEGER#,
+      is_show = #isShow:INTEGER#,
+      comment = #comment:VARCHAR#,
+      member_id = #memberId:BIGINT#,
+      goods_id = #goodsId:BIGINT#,
+      order_id = #orderId:BIGINT#,
+      create_time = #createTime:TIMESTAMP#
+    where id = #id:BIGINT#
+  </update>
+  <select id="selectByExampleByPage" resultMap="ibatorgenerated_BaseResultMap" parameterClass="com.rc.openapi.vo.TGoodsCommentExample" >
+                    select id, sum_fraction, type, seller, fast_mail, goods, fast_mail_people, is_show, comment,
+                      member_id, goods_id, order_id, create_time
+                    from t_goods_comment
+                    <isParameterPresent >
+                      <include refid="t_goods_comment.ibatorgenerated_Example_Where_Clause" />
+                      <isNotNull property="orderByClause" >
+                        order by $orderByClause$
+                      </isNotNull>
+                    </isParameterPresent>
+					limit $pageInfo.start$ ,$pageInfo.pageSize$
+  </select>
+  
+  
+  
+  
+<select id="get-product-pinglun" parameterClass="java.util.Map" resultClass="com.rc.openapi.model.ReviewModel" >
+	SELECT comm.`comment` AS content,
+	DATE_FORMAT(comm.create_time,'%Y-%m-%d') AS create_date,
+	m.`user_name` AS username
+	FROM t_goods_comment comm
+	LEFT JOIN t_member m  ON comm.`member_id`=m.`id`
+	WHERE comm.`goods_id`=#productid# and comm.is_show = 1
+	<isEqual property="flag" compareValue="bad" >  
+	 AND type = 3
+	</isEqual>
+	<isEqual property="flag" compareValue="good" >  
+	  AND type = 2
+	</isEqual>
+	<isEqual property="flag" compareValue="best" >  
+	  AND type = 1
+	</isEqual>
+	order by comm.id desc
+	limit $pageInfo.start$ ,$pageInfo.end$ 
+</select>
+
+
+  <select id="get-product-pinglun-count" parameterClass="java.util.Map" resultClass="java.lang.Integer" >
+	SELECT count(0)
+	FROM t_goods_comment comm
+	WHERE comm.`goods_id`=#productid# and comm.is_show = 1
+	<isEqual property="flag" compareValue="bad" >  
+	 AND comm.type = 3
+	</isEqual>
+	<isEqual property="flag" compareValue="good" >  
+	  AND comm.type = 2
+	</isEqual>
+	<isEqual property="flag" compareValue="best" >  
+	  AND comm.type = 1
+	</isEqual>
+  </select>
+  
+  
+  
+<select id="score-percent"  parameterClass="java.util.HashMap" resultClass="java.lang.Float" >
+  
+SELECT (
+(SELECT COUNT(0) FROM t_goods_comment com WHERE com.`goods_id`=#productid:decimal# AND TYPE IN (1,2))
+/(SELECT COUNT(0) FROM t_goods_comment com WHERE com.`goods_id`=#productid:decimal# )
+) AS percent
+
+</select>
+  
+  
+<select id="review_people" parameterClass="java.util.Map" resultClass="java.lang.Integer" >
+   SELECT COUNT(0) FROM t_goods_comment WHERE goods_id = #productid:decimal#
+</select>
+
+<select id="dai_pinglun"  parameterClass="java.util.Map" resultClass="java.util.HashMap" >
+
+SELECT CAST( o.id AS CHAR) AS id,o.order_sn AS sn ,o.member_id AS member,
+DATE_FORMAT(o.create_date,'%Y-%m-%d')AS create_date,o.payable_amount AS order_price,
+(
+   SELECT pro.abbreviation_picture 
+   FROM t_order_item it 
+   LEFT JOIN t_goods pro ON it.goods_id = pro.id
+   WHERE it.order_id = o.id AND it.if_reviews=0
+   LIMIT 0,1
+) AS imgurl 
+FROM t_order o
+WHERE o.`member_id`=#userid:varchar#  
+AND o.order_status=3 
+AND o.delete_status=0
+AND ( SELECT COUNT(0) FROM t_order_item WHERE order_id = o.id AND if_reviews=0)>0
+order by o.id desc
+limit $pageInfo.start$ ,$pageInfo.end$
+</select>
+   
+<select id="dai_pinglun_count"  parameterClass="java.util.Map" resultClass="java.lang.Integer" >
+	SELECT COUNT(0)
+	FROM t_order o
+	WHERE o.`member_id`= #userid:varchar#
+	AND o.order_status=3 
+	AND o.delete_status=0
+	AND ( SELECT COUNT(0) FROM t_order_item WHERE order_id = o.id AND if_reviews=0)>0
+</select>
+   
+
+<select id="order-to-pl-page" parameterClass="java.util.Map" resultClass="java.util.HashMap" >
+	SELECT 
+	CAST(pro.id AS CHAR) AS product_id,
+	pro.goods_name AS full_name,
+	pro.goods_name as name,pro.abbreviation_picture  AS image,
+	FORMAT(it.price,2) AS price,
+	CAST(it.order_id AS CHAR) AS order_id, 
+	CAST(it.quantity AS CHAR) AS quantity
+	FROM t_order  t
+	LEFT JOIN t_order_item  it ON t.id = it.order_id
+	LEFT JOIN t_goods pro ON it.goods_id = pro.id
+	WHERE t.id = #order_id:varchar#
+	AND it.if_reviews=0
+	ORDER BY t.id DESC
+	limit $pageInfo.start$ ,$pageInfo.end$
+</select>
+
+<select id="order-to-pl-page-count" parameterClass="java.util.Map" resultClass="java.lang.Integer" >
+	SELECT 
+	count(0)
+	FROM t_order  t
+	LEFT JOIN t_order_item  it ON t.id = it.order_id
+	LEFT JOIN t_goods pro ON it.goods_id = pro.id
+	WHERE t.id = #order_id:varchar#
+	AND it.if_reviews=0
+	ORDER BY t.id DESC
+	limit $pageInfo.start$ ,$pageInfo.end$
+</select>
+
+<update id="update-order-item" parameterClass="java.util.Map" >
+UPDATE t_order_item SET if_reviews=1 WHERE  goods_id=#goodsid:varchar# AND order_id = #orderid:varchar#
+</update>
+  
+  <select id="countGoodsPinglun" parameterClass="java.util.Map" resultClass="java.lang.Integer" >
+	SELECT 
+	  count(gc.id)
+	FROM
+	  t_goods_comment gc 
+	  LEFT JOIN t_goods g 
+	    ON gc.`goods_id` = g.`id` 
+	   WHERE g.id=#gid:BIGINT#
+	   AND gc.`is_show`=1
+</select>
+</sqlMap>

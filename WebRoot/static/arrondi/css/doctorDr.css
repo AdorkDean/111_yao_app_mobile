@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,textarea,input,span,figure,aside,time,article{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
+audio:not([controls]){display:none}
+html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+body{width:100%;font-family:"SimHei",Helvetica,Arial,sans-serif;font-size:14px;color:#000;background:#e0e1e5}
+input,textarea{font-family:"SimHei",Helvetica,Arial,sans-serif;color:#fff}
+input:-moz-placeholder,textarea:-moz-placeholder{color:#fff}
+input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#fff}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#fff}
+a{color:#fff;text-decoration:none;/*-webkit-tap-highlight-color:rgba(0,0,0,0.2);*/-webkit-tap-highlight-color:transparent}
+a:hover{text-decoration:none}
+a:focus{outline:thin dotted}
+a:hover,a:active{outline:0}
+textarea,input{resize:none;outline:0;font-size:100%;-webkit-tap-highlight-color:rgba(255,0,0,0)}
+textarea{resize:none;-webkit-appearance:none}
+ul,ol{list-style:none}
+em{font-style:normal}
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:".";clear:both;height:0;overflow:hidden}
+.fl{float:left}
+.fr{float:right}
+
+/*content*/
+.banner,.banner img{width:100%; display:block;}
+.banner span{display:none;}
+
+/*product_list*/
+.content-box{overflow:hidden;}
+.Junfold a.show-list{height:60px; line-height:60px; color:#e0e1e5; font-size:16px; width:100%; display:block; position:relative; background:#28211b; text-align:center; border-top:1px #ccc solid; margin-top:-1px;}
+.Junfold a b{color:#fff; padding:0 2px;}
+.subject-list{padding-top:6px;}
+.list-corner{width:18px; height:10px; background:url(../images/corner.svg) no-repeat; background-size:18px 10px;-o-transform: rotate(180deg); -moz-transform: rotate(180deg); -webkit-transform: rotate(180deg); position:absolute; right:20px; top:25px; display:none;}
+.Junfold.on .list-corner{-o-transform: rotate(0deg); -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg);}
+.subject-list ul{padding:0 0 0 6px;}
+.subject-list li{width:50%; float:left;}
+.subject-box{background:#fff; overflow:hidden; margin:0 6px 6px 0; height:248px; position:relative;}
+.subject-info{margin:0 6px; padding-top:6px;}
+.subject-info .for-img{height:120px; display:block; box-shadow:0 0 0 1px #e0e1e5 inset; overflow:hidden; padding:1px; position:relative;}
+.for-img img{width:100%; height:120px;}
+.subject-title{height:20px; line-height:20px; font-size:15px; overflow:hidden; word-break:keep-all; white-space:nowrap; text-overflow:ellipsis; margin-top:5px; color:#2a2a2a;}
+.subject-spec{ color:#5c5c5c; font-size:12px; height:16px; line-height:16px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.selling-price{font-size:15px; font-weight:bold; color:#e51837;}
+.original-price{font-size:12px; color:#8a8684; text-decoration:line-through;}
+.buy-now-btn{height:34px; line-height:34px; background:#af271e; display:block;  text-align:center; font-size:15px; color:#fff; position:absolute; bottom:6px; left:6px; right:6px;}
+
+/*promotion-sales*/
+.single-product{padding:6px; margin:0 6px 6px; background:#fff;}
+.for-single-img{ position:relative; overflow:hidden;}
+.for-single-img img{width:100%; display:block;}
+.purchase-tag{background:#fff601; height:100px; width:100px; position:absolute; left:-60px; top:-60px; font-size:12px; line-height:180px; text-align:center; color:#710110; font-weight:bold; transform:rotate(-45deg); -o-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg);}
+.promotion-title{font-size:12px; color:#343434; height:18px; line-height:18px; margin-top:5px; overflow:hidden; word-break:keep-all; white-space:nowrap; text-overflow:ellipsis;}
+.promotion-effect{font-weight:bold; color:#000; font-size:16px; margin-top:4px;}
+.promotion-price{color:#e51837; margin-top:5px;}
+.promotion-price strong{font-size:18px;}
+.promotion-info .subject-title{margin-top:8px;}
+.promotion-info .subject-spec,.promotion-info .selling-price{margin-top:5px;}
+.cut-price-tag{background:#d30007; height:25px; width:100px; padding-top:75px; position:absolute; right:-60px; top:-60px; font-size:12px; line-height:12px; text-align:center; color:#fff; font-weight:bold; transform:rotate(45deg); -o-transform: rotate(45deg); -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg);}
+.font-small{font-size:8px !important;}
+.classify-tag{ background:#ea1618; width:26px; height:26px; padding:4px; color:#fff; position:absolute; left:6px; top:6px; font-size:12px; text-align:center; white-space:normal; word-break:break-all;}
+.no-more{margin:0 10px; height:50px; line-height:40px; text-align:center;}

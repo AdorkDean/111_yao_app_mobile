@@ -1,0 +1,262 @@
+<!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓罗↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+<servlet>
+	<servlet-name>GetHealthyPlanInfoService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.GetHealthyPlanInfoService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetHealthyPlanInfoService</servlet-name>
+	<url-pattern>/URIService/gethealthyplaninfo-V2</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>GetProductService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.GetProductService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetProductService</servlet-name>
+	<url-pattern>/URIService/getproduct-V2</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>GetHomePageInfoService2</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.GetHomePageInfoService2
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetHomePageInfoService2</servlet-name>
+	<url-pattern>/URIService/gethomepageinfo-V2</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>GetHomePageActivityService2</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.GetHomePageActivityService2
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetHomePageActivityService2</servlet-name>
+	<url-pattern>/URIService/gethomepageactivity-V2</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>GetPromotionProductPageService2</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.GetPromotionProductPageService2
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetPromotionProductPageService2</servlet-name>
+	<url-pattern>/URIService/getpromotionproductpage-V2</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>GetProductCategoryService_V2</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.GetProductCategoryService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetProductCategoryService_V2</servlet-name>
+	<url-pattern>/URIService/getProductCategory-V2</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>GetSubProductCategoryService_V2</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.GetSubProductCategoryService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetSubProductCategoryService_V2</servlet-name>
+	<url-pattern>/URIService/getSubProductCategory-V2</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>GetUpAndDownNavService_V2</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.GetUpAndDownNavService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetUpAndDownNavService_V2</servlet-name>
+	<url-pattern>/URIService/getUpAndDownNav-V2</url-pattern>
+</servlet-mapping>
+<!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑罗↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
+
+<!-- ##############################刘志强#################################### -->
+<servlet>
+	<servlet-name>MemberPointServiceV2</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.MemberPointService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>MemberPointServiceV2</servlet-name>
+	<url-pattern>/URIService/memberpoint-V2</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>CreateOrderServiceV2</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.CreateOrderService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>CreateOrderServiceV2</servlet-name>
+	<url-pattern>/URIService/createOrderService-V2</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>CDeliveryListURLServiceV2</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.CDeliveryListURLService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>CDeliveryListURLServiceV2</servlet-name>
+	<url-pattern>/URIService/cdeliveryListURLService-V2</url-pattern>
+</servlet-mapping>
+
+
+
+<!-- ##############################刘志强#################################### -->
+
+<!-- 病例接口开始 -->
+<servlet>
+	<servlet-name>PrescriptionServiceV2</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.PrescriptionURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>PrescriptionServiceV2</servlet-name>
+	<url-pattern>/URIService/prescription-V2</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>AddPrescriptionServiceV2</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.AddPrescriptionURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>AddPrescriptionServiceV2</servlet-name>
+	<url-pattern>/URIService/addPrescription-V2</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>DetailPrescriptionServiceV2</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.DetailPrescriptionURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>DetailPrescriptionServiceV2</servlet-name>
+	<url-pattern>/URIService/detailPrescription-V2</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>EditPrescriptionServiceV2</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.EditPrescriptionURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>EditPrescriptionServiceV2</servlet-name>
+	<url-pattern>/URIService/editPrescription-V2</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>DelPrescriptionServiceV2</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.DelPrescriptionURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>DelPrescriptionServiceV2</servlet-name>
+	<url-pattern>/URIService/delPrescription-V2</url-pattern>
+</servlet-mapping>
+<!-- 病例接口结束 -->
+
+<servlet>
+	<servlet-name>dorder</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.DiTuiOrder
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>dorder</servlet-name>
+	<url-pattern>/URIService/dorder</url-pattern>
+</servlet-mapping>
+<!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓王↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+<servlet>
+	<servlet-name>BarCodeScanService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.BarCodeScanService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>BarCodeScanService</servlet-name>
+	<url-pattern>/URIService/barCodeScan-V2</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>CIAMobileVerifyServiceV2</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.CIAMobileVerifyService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>CIAMobileVerifyServiceV2</servlet-name>
+	<url-pattern>/URIService/ciaverify-V2</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>CIARegisterServiceV2</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.CIARegisterService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>CIARegisterServiceV2</servlet-name>
+	<url-pattern>/URIService/ciaregister-V2</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>OrderInfoURIService_V2</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.OrderInfoURIService_V2
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>OrderInfoURIService_V2</servlet-name>
+	<url-pattern>/URIService/orderInfo-V2</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>GetHomeLeftService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.GetHomeLeftService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetHomeLeftService</servlet-name>
+	<url-pattern>/URIService/getHomeLeftService-V2</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>HuanXinURIService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.HuanXinURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>HuanXinURIService</servlet-name>
+	<url-pattern>/URIService/HuanXinURIService</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>bindingCoupon</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV2.CouponService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>bindingCoupon</servlet-name>
+	<url-pattern>/URIService/bindingCoupon</url-pattern>
+</servlet-mapping>
+<!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓王↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+

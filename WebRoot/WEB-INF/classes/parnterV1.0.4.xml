@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<methods>
+<!-- 刘志强   -->
+		<method>
+			<name>getaddressbycityservice</name>
+			<uri>/URIService/getaddressbycityservice</uri>
+			<param>citycode</param>
+			<desc>根据城市查询区域二级区域</desc>
+		</method>
+		
+		<method>
+			<name>addReceiverAddress-V4</name>
+			<uri>/URIService/addReceiverAddress-V4</uri>
+			<param>sessionId,mobile,receiver,isDefault,areaId,citycode,cityName,longitude,latitude,locationAddress,address</param>
+			<desc>添加收获地址</desc>
+		</method>
+		<method>
+			<name>updateReceiverAddress-V4</name>
+			<uri>/URIService/updateReceiverAddress-V4</uri>
+			<param>id,sessionId,mobile,receiver,isDefault,areaId,citycode,cityName,longitude,latitude,locationAddress,address</param>
+			<desc>修改收获地址</desc>
+		</method>
+<!-- 刘志强  -->
+
+<!-- 杨洁亮   -->
+		<method>
+			<name>statisticsipuriservice</name>
+			<uri>/URIService/statisticsipuriservice</uri>
+			<desc>统计IP</desc>
+		</method>
+<!-- 杨洁亮  -->
+
+
+		<method>
+			<name>rxproductService</name>
+			<uri>/URIService/rxproductService</uri>
+			<param>pid</param>
+			<desc>处方药商品详情</desc>
+		</method>
+
+
+<!-- 张杰   -->
+		<method>
+			<name>getReserveOrderPricesURLService</name>
+			<uri>/URIService/getReserveOrderPricesURLService</uri>
+			<desc>获取 预订单商品信息价格信息及运费</desc>
+		</method>
+		<method>
+			<name>createReserveOrderURLService</name>
+			<uri>/URIService/createReserveOrderURLService</uri>
+			<desc>创建预订单</desc>
+		</method>
+		
+		<method>
+			<name>getGoodStockURIService</name>
+			<uri>/URIService/getGoodStockURIService</uri>
+			<desc>获取商品库存</desc>
+		</method>
+<!-- 张杰  -->
+
+		<method>
+			<name>getStartImgService</name>
+			<uri>/URIService/getStartImgService</uri>
+			<desc>获取开机图片</desc>
+		</method>
+		
+		
+		
+		<method>
+			<name>OrderQueryResultService-V4</name>
+			<uri>/URIService/OrderQueryResultService-V4</uri>
+			<param>orderid,sessionId</param>
+			<desc>微信支付查询</desc>
+		</method>
+		
+		
+		<method>
+			<name>OrderPay-V4</name>
+			<uri>/URIService/OrderPayV4</uri>
+			<param>sessionId,orderId,paymentPluginId</param>
+			<desc>订单支付</desc>
+		</method>
+		<method>
+			<name>GetHomePageActivityServiceV4</name>
+			<uri>/URIService/GetHomePageActivityServiceV4</uri>
+			<param>client_type</param>
+			<desc>首页活动相关数据</desc>
+		</method>
+		
+		<!-- 魏 -->
+		<method>
+			<name>GetProductCategoryServiceV4</name>
+			<uri>/URIService/GetProductCategoryServiceV4</uri>
+			<param>client_type</param>
+			<desc>全部分类初始化</desc>
+		</method>
+		<method>
+			<name>GetSubProductCategoryServiceV4</name>
+			<uri>/URIService/GetSubProductCategoryServiceV4</uri>
+			<param>client_type</param>
+			<desc>分类子分类</desc>
+		</method>
+		<method>
+			<name>GetRotateMessageService</name>
+			<uri>/URIService/GetRotateMessageService</uri>
+			<param></param>
+			<desc>app首页消息轮播</desc>
+		</method>
+		<method>
+			<name>GetHomeNewInfoService4</name>
+			<uri>/URIService/GetHomeNewInfoService4</uri>
+			<param></param>
+			<desc>app首页轮播,15分类,专区</desc>
+		</method>
+		<method>
+			<name>TestUtilService</name>
+			<uri>/URIService/TestUtilService</uri>
+			<param></param>
+			<desc>开发测试</desc>
+		</method>
+		<method>
+			<name>AssociationKeyService</name>
+			<uri>/URIService/AssociationKeyService</uri>
+			<param></param>
+			<desc>搜索联想</desc>
+		</method>
+		<method>
+			<name>TrendingKeywordService</name>
+			<uri>/URIService/TrendingKeywordService</uri>
+			<param></param>
+			<desc>热搜词</desc>
+		</method>
+		<!-- 魏 -->
+		
+		<!-- By LGP -->
+		<method>
+			<name>getproduct-V4</name>
+			<uri>/URIService/GetProductInfoService</uri>
+			<param>pid</param>
+			<desc>获取商品详情</desc>
+		</method>
+		
+		
+	</methods>
+</root>

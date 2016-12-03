@@ -1,0 +1,476 @@
+<!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓罗↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+<servlet>
+	<servlet-name>GetHomePageInfoService3</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.GetHomePageInfoService3
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetHomePageInfoService3</servlet-name>
+	<url-pattern>/URIService/gethomepageinfo-V3</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>GotoPayService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.GotoPayService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GotoPayService</servlet-name>
+	<url-pattern>/URIService/gotopay-V3</url-pattern>
+</servlet-mapping>
+
+<!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑罗↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
+
+
+
+
+
+
+
+
+
+
+
+
+<servlet>
+	<servlet-name>HealthCatetory</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.HealthCatetory
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>HealthCatetory</servlet-name>
+	<url-pattern>/URIService/HealthCatetory</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>CartAddTaoURIService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.CartAddTaoURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>CartAddTaoURIService</servlet-name>
+	<url-pattern>/URIService/CartAddTaoURIService</url-pattern>
+</servlet-mapping>
+
+
+
+
+
+<servlet>
+	<servlet-name>OrderInitService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.OrderInitService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>OrderInitService</servlet-name>
+	<url-pattern>/URIService/OrderInit</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>OrderCouponListInitService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.OrderCouponListInitService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>OrderCouponListInitService</servlet-name>
+	<url-pattern>/URIService/OrderCouponListInit</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>OrderPayServiceV3</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.OrderPayService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>OrderPayServiceV3</servlet-name>
+	<url-pattern>/URIService/OrderPayV3</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>OrderSaveServiceV3</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.OrderSaveService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>OrderSaveServiceV3</servlet-name>
+	<url-pattern>/URIService/OrderSaveV3</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>OrderCouponUserService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.OrderCouponUserService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>OrderCouponUserService</servlet-name>
+	<url-pattern>/URIService/OrderCouponUser</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>YktPayUrlService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.YktPayUrlService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>YktPayUrlService</servlet-name>
+	<url-pattern>/URIService/YktPay</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>OrderPayReturnURLService</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.OrderPayReturnURLService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>OrderPayReturnURLService</servlet-name>
+	<url-pattern>/URIService/OrderPayReturn</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>OrderInfoURIService-V3</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.OrderInfoURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>OrderInfoURIService-V3</servlet-name>
+	<url-pattern>/URIService/OrderInfoURL-V3</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>ExamineStartService-V3</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.ExamineStartService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>ExamineStartService-V3</servlet-name>
+	<url-pattern>/URIService/ExamineStartService-V3</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+	<servlet-name>OrderQueryResultService-V3</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.OrderQueryResultService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>OrderQueryResultService-V3</servlet-name>
+	<url-pattern>/URIService/OrderQueryResultService-V3</url-pattern>
+</servlet-mapping>
+
+
+
+<!-- Wei -->
+<servlet>
+	<servlet-name>GetHomeNewInfoService-V3</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.GetHomeNewInfoService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetHomeNewInfoService-V3</servlet-name>
+	<url-pattern>/URIService/GetHomeNewInfoService-V3</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>MoreClassifyURIService-V3</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.MoreClassifyURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>MoreClassifyURIService-V3</servlet-name>
+	<url-pattern>/URIService/MoreClassifyURIService-V3</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>GetHomePageActivityService-V3</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.GetHomePageActivityService3
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetHomePageActivityService-V3</servlet-name>
+	<url-pattern>/URIService/GetHomePageActivityService-V3</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>AddReceiverAddressURIService-V3</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.AddReceiverAddressURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>AddReceiverAddressURIService-V3</servlet-name>
+	<url-pattern>/URIService/AddReceiverAddressURIService-V3</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>DelReceiverAddressURIService-V3</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.DelReceiverAddressURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>DelReceiverAddressURIService-V3</servlet-name>
+	<url-pattern>/URIService/DelReceiverAddressURIService-V3</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>GetReceiverAddressByIdURIService-V3</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.GetReceiverAddressByIdURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetReceiverAddressByIdURIService-V3</servlet-name>
+	<url-pattern>/URIService/GetReceiverAddressByIdURIService-V3</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>GetReceiverAddressURIService-V3</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.GetReceiverAddressURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetReceiverAddressURIService-V3</servlet-name>
+	<url-pattern>/URIService/GetReceiverAddressURIService-V3</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+	<servlet-name>UpdateReceiverAddressURIService-V3</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.UpdateReceiverAddressURIService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>UpdateReceiverAddressURIService-V3</servlet-name>
+	<url-pattern>/URIService/UpdateReceiverAddressURIService-V3</url-pattern>
+</servlet-mapping>
+
+
+
+<!-- Wei -->
+<servlet>
+	<servlet-name>GetUpAndDownNavService_V3</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.GetUpAndDownNavService_3
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GetUpAndDownNavService_V3</servlet-name>
+	<url-pattern>/URIService/getUpAndDownNav-V3</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>getMemberCoupon</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.GetCouponService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>getMemberCoupon</servlet-name>
+	<url-pattern>/URIService/getMemberCoupon</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>getEverydayCoupon</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.CouponBinding
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>getEverydayCoupon</servlet-name>
+	<url-pattern>/URIService/getEverydayCoupon</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>shortcutMobile</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.ShortcutMobileCheckoutService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>shortcutMobile</servlet-name>
+	<url-pattern>/URIService/shortcutMobile</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>shortcutLogin</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.ShortcutLoginService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>shortcutLogin</servlet-name>
+	<url-pattern>/URIService/shortcutLogin</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>countpricefrom</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.CountpricefromService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>countpricefrom</servlet-name>
+	<url-pattern>/URIService/countpricefrom</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>storeOrder</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.StoreOrderService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>storeOrder</servlet-name>
+	<url-pattern>/URIService/storeOrder</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>WXLogin</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.WXLoginService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>WXLogin</servlet-name>
+	<url-pattern>/URIService/WXLogin</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>couponlistservice</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.CouponListService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>couponlistservice</servlet-name>
+	<url-pattern>/URIService/couponlistservice</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>membercenterservice</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.MemberCenterService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>membercenterservice</servlet-name>
+	<url-pattern>/URIService/membercenterservice</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>memberonlinepointlistservice</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.MemberOnLinePointListService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>memberonlinepointlistservice</servlet-name>
+	<url-pattern>/URIService/memberonlinepointlistservice</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>memberofflinepointlistservice</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.MemberOffLinePointListService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>memberofflinepointlistservice</servlet-name>
+	<url-pattern>/URIService/memberofflinepointlistservice</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>memberpointlistservice</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.MemberPointListService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>memberpointlistservice</servlet-name>
+	<url-pattern>/URIService/memberpointlistservice</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>storeOrderInfo</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.StoreOrderInfoService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>storeOrderInfo</servlet-name>
+	<url-pattern>/URIService/storeOrderInfo</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>exchangeCoupon</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.ExchangeCouponService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>exchangeCoupon</servlet-name>
+	<url-pattern>/URIService/exchangeCoupon</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>comment</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.CommentService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>comment</servlet-name>
+	<url-pattern>/URIService/comment</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>storeOrderComment</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.StoreOrderCommentService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>storeOrderComment</servlet-name>
+	<url-pattern>/URIService/storeOrderComment</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>isStockNotNull</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.IsStockNotNullService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>isStockNotNull</servlet-name>
+	<url-pattern>/URIService/isStockNotNull</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>YDF</servlet-name>
+	<servlet-class>
+		com.rc.openapi.serviceuriV3.YDFService
+	</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>YDF</servlet-name>
+	<url-pattern>/URIService/YDF</url-pattern>
+</servlet-mapping>

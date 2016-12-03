@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<!--允许全屏-->
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+<!--缩放比例-->
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>推广</title>
+<style type="text/css">
+@charset "utf-8";
+/* CSS Document */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,textarea,input,span,figure,aside,time,figcaption{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
+audio:not([controls]){display:none}
+html,body{height:100%; position:relative}
+html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+body{width:100%;font-family:"SimHei",Helvetica,Arial,sans-serif;font-size:15px;color:#000;background:#fff2e9}
+input,textarea{font-family:"SimHei",Helvetica,Arial,sans-serif;color:#000}
+input:-moz-placeholder,textarea:-moz-placeholder{color:#4e4e4e}
+input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#4e4e4e}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#4e4e4e}
+a{color:#0d0d0d;text-decoration:none;/*-webkit-tap-highlight-color:rgba(0,0,0,0.2);*/-webkit-tap-highlight-color:transparent}
+a:hover{text-decoration:none}
+a:focus{outline:thin dotted}
+a:hover,a:active{outline:0}
+textarea,input{resize:none;outline:0;font-size:100%;-webkit-tap-highlight-color:rgba(255,0,0,0)}
+textarea{resize:none;-webkit-appearance:none}
+ul,ol{list-style:none}
+em{font-style:normal}
+h1,h2,h3,h4,h5,h6,b{font-weight:normal;}
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:".";clear:both;height:0;overflow:hidden}
+.fl{float:left}
+.fr{float:right}
+
+.extend-header{height:320px; width:100%; background:url(images/bg.jpg) no-repeat bottom center; background-size:cover; overflow:hidden;}
+.extend-main{max-width:720px; margin:0 auto;}
+.activity-time{margin-top:-25px;}
+.activity-time img{width:100%; display:block;}
+.pro-list li{margin:10px; position:relative; display:block;}
+.pro-list .pro-info{display:block;}
+.pro-list .quan{display:block; position:absolute; right:0; top:0; bottom:0; width:12%; z-index:99;}
+.pro-list .quan span{display:none;}
+.no-press{position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,.7); z-index:199; }
+.block{display:block !important}
+.show{display:none !important}
+.pro-list li img{width:100%; display:block;}
+
+/*out-window*/
+.out-window{width:100%; height:100%; position:absolute; left:0; top:0; right:0; bottom:0; text-align:center; z-index:99;}
+.out-tips{padding:15px 30px; margin-left:30px; margin-right:30px; background:rgba(0,0,0,.8); border-radius:5px; -webkit-border-radius:5px; color:#fff; line-height:22px;}
+.black-cover{background:rgba(0,0,0,.5); z-index:299;}
+.out-box{background:#fff; margin-left:30px; margin-right:30px; border-radius:5px; -webkit-border-radius:5px; margin-top:150px;}
+.out-box-tips{padding:40px; color:#4e4e4e; line-height:22px;}
+.for-btn{border-top:1px #e1e1e1 solid;}
+.for-btn a{width:100%; height:42px; line-height:42px; text-align:center; color:#000; font-size:18px; display:inline-block;}
+.out-box-info{padding:25px 20px 20px; position:relative;}
+.out-box-info p{position:relative; padding:0 10px; background:#ececec; border-radius:5px; -webkit-border-radius:5px; margin-top:10px; overflow:hidden;}
+.out-box-info p.error-tips{color:#f00; background:none; text-align:left; padding:0; position:absolute; top:0; left:20px; right:20px;}
+.out-box-info input{width:100%; height:35px; line-height:35px; background:#ececec;}
+.out-box-info input:-moz-placeholder,textarea:-moz-placeholder{color:#a8a8a8}
+.out-box-info input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#a8a8a8}
+.out-box-info input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#a8a8a8}
+.get-code{width:80px; height:35px; line-height:35px; position:absolute; right:0; top:0; background:#ff7474; color:#fff; border-radius:0 5px 5px 0; -webkit-border-radius:0 5px 5px 0; font-size:13px; text-align:center;}
+.gray{background:#dadada; color:#999; cursor:default;}
+/**/
+.extend-address{position:absolute; left:10px; top:10px; font-size:14px;}
+.extend-address input{max-width:140px; padding:6px 10px; background:rgba(0,0,0,.7); color:#fff; border-radius:4px; -webkit-border-radius:4px;}
+.extend-address input:-moz-placeholder,textarea:-moz-placeholder{color:rgba(255,255,255,.7);}
+.extend-address input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:rgba(255,255,255,.7);}
+.extend-address input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:rgba(255,255,255,.7);}
+.extend-address a{width:40px; height:40px; display:inline-block; position:absolute; top:-6px; left:105px; background:url(images/search.png) no-repeat; background-position:10px;}
+.close{width:40px; height:40px; display:inline-block; position:absolute; right:0; top:0; background:url(images/close.png) no-repeat; background-size:20px; background-position:10px; z-index:300;}
+</style>
+</head>
+
+<body>
+<a id="top" name="top"></a>
+<article class="extend-box">
+	<!-- <div class="extend-address">
+    	<input type="search" placeholder="请输入您的地址" id="address" />
+        <a href="#" onclick="handleSuccess();"></a>
+    </div> -->
+	<header class="extend-header"></header>
+    <article class="extend-main">
+        <div class="activity-time">
+            <img src="images/time.png">
+        </div>
+        <ul class="pro-list">
+        	<li><!--<b class="no-press"> --></b><a href="javascript:product(40914601572,'APP推广');" class="pro-info"><img src="images/pro1.jpg"></a><a  href="javascript:void(0)" class="quan" ><span>领券</span></a></li>
+            <li><a href="javascript:product(40914601572,'APP推广');" class="pro-info"><img src="images/pro2.jpg"></a><a  href="#top" class="quan" ><span>领券</span></a></li>
+            <li><a href="javascript:product(40914601572,'APP推广');" class="pro-info"><img src="images/pro4.jpg"></a><a href="#top" class="quan" ><span>领券</span></a></li>
+            <li><a href="javascript:product(40914601572,'APP推广');" class="pro-info"><img src="images/pro5.jpg"></a><a href="#top" class="quan" ><span>领券</span></a></li>
+            <li><a href="javascript:product(40914601572,'APP推广');" class="pro-info"><img src="images/pro3.jpg"></a><a href="#top" class="quan" ><span>领券</span></a></li>
+            <li><a href="javascript:void(0)"><img src="images/pro-more.jpg"></a></li>
+        </ul>
+    </article>
+</article>
+    
+   <div class="out-window black-cover" style="display:none" id="succ">
+    	<div class="out-box">
+        	<div class="out-box-tips" id="lingqu">领取成功</div>
+            <div class="for-btn">
+                <a href="javascript:void(0)" onClick="hideOut()">确定</a>
+            </div>
+        </div>
+    </div>
+    
+    <!--预留手机号弹窗-->
+    <div class="out-window black-cover" style="display:none" id="binding">
+		<a href="javascript:void(0)" onClick="hideOut()" class="close"></a>
+    	<div class="out-box">
+        	<div class="out-box-info">
+        	    <input type="hidden" value="" id="coupon">
+            	<p class="error-tips" style="display:none" id="err">信息错误</p>
+                <p><input type="tel" placeholder="请输入手机号"  onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"  maxlength="11" id="mobile"></p>
+                <p><input type="tel" placeholder="请输入验证码"  maxlength="4" id="code"><a href="javascript:void(0)" class="get-code" id="btn" onclick="sendMessage(this);">获取验证码</a></p>
+            </div>
+            <div class="for-btn">
+                <a href="javascript:void(0)" onClick="binding()">确定</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+var brower = {
+		versions:function(){
+			var u = window.navigator.userAgent;
+			var num ;
+			if(u.indexOf('Trident') > -1){
+				//IE
+				return "IE";
+			}else if(u.indexOf('Presto') > -1){
+				//opera
+				return "Opera";
+			}else if(u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1){
+				//firefox
+				return "Firefox";
+			}else if(u.indexOf('AppleWebKit' && u.indexOf('Safari') > -1) > -1){
+				//苹果、谷歌内核
+				if(u.indexOf('Chrome') > -1){
+					//chrome	
+					return "Chrome";
+				}else if(u.indexOf('OPR')){
+					//webkit Opera
+					return "Opera_webkit"
+				}else{
+					//Safari
+					return "Safari";
+				}
+			}else if(u.indexOf('Mobile') > -1){
+				//移动端
+				if(!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)){
+					//ios
+						if(u.indexOf('iPhone') > -1){
+							//iphone
+							return "ios"	
+						}else if(u.indexOf('iPod') > -1){
+							//ipod	
+							return "ios"
+						}else if(u.indexOf('iPad') > -1){
+							//ipad
+							return "ios"
+						}
+				}else if(u.indexOf('Android') > -1 || u.indexOf('Linux') > -1){
+					//android
+					num = u.substr(u.indexOf('Android') + 8, 3);
+					return "android";
+				}else if(u.indexOf('BB10') > -1 ){
+					//黑莓bb10系统
+					return "BB10";
+				}else if(u.indexOf('IEMobile')){
+					//windows phone
+					return "Windows Phone"
+				}
+			}
+		}
+	}
+var shang = 40.026238;
+
+var xia = 39.977805;
+
+var zuo =116.452077;
+
+var you = 116.507125;
+
+var weizi=['博雅','一分店','二分店'];
+
+var b = "0" ;
+
+function handleSuccess() {
+
+	 //var  c =  checkjingweidu(ggPoint.lng,ggPoint.lat);
+	 //if(c){
+	   // $(".no-press").addClass("show");
+	 //}
+     b = "0"
+	 var address = $('#address').val();
+	  if(""!=address){
+		 for(var i=0 ; i<weizi.length;i++){
+			var s = weizi[i];
+            if(address==s){
+			  $(".no-press").addClass("show");
+			  b = "1";
+			  break;
+			}
+		 }
+		 if(b=="0"){
+		    $('#lingqu').html('该位置没有活动，敬请期待');
+			$(".no-press").removeClass("show");
+			$(".no-press").addClass("block");
+            $('#succ').show();
+		 }
+	 }else{
+		$('#lingqu').html('请选择定位地址');
+		$(".no-press").removeClass("show");
+		$(".no-press").addClass("block");
+        $('#succ').show();
+	 }
+}
+</script>
+<script src="js/jquery.min.js"></script>
+<script type = "text/javascript" >
+var wait = 60;
+
+function sendMessage(o){
+    var mobile = $('#mobile').val();
+    var re = /^1[3|4|5|8|7][0-9]\d{4,8}$/ ;
+    if (re.test(mobile)) {
+    	var btn = $("#btn");
+		btn.attr("onclick","");	
+		time(o);
+       $.post("http://router.111yao.com/sltRouter?method=sendMessage", {mobile:mobile,random:Math.random()}, function(data){
+           if(data=="1"){
+            $('#err').show();
+            $('#err').html("短信已下发");
+           }else  if(data=="3"){
+            $('#err').show();
+            $('#err').html("您已参加过该活动~");
+           }
+       });
+    } else {
+        $('#err').show();
+        $('#err').html("手机格式不正确");
+    }
+}
+
+//发送验证码
+function time(o) {
+	var oBtn = $("#btn");
+	if (wait == 0) {
+		//o.removeAttribute("disabled");
+		oBtn.removeClass("gray");
+		oBtn.html("获取验证码")
+		wait = 60
+	} else {
+		//o.setAttribute("disabled", true);
+		oBtn.addClass("gray");
+		oBtn.html(wait+"s")
+		wait--;
+		if(oBtn.html()=="1s"){
+			oBtn.attr("onclick","sendMessage(this)");
+		}
+		setTimeout(function() {
+			time(o)
+		}, 1000)
+	}
+}
+
+function showOut(coupon){
+    $('#mobile').val('');
+	$('#code').val('');
+	$('#err').hide();
+    $('#coupon').val(coupon);
+	$('#binding').show();
+	$('#binding').height($(document).height());
+}
+function hideOut(){
+	$('.out-window').hide();
+}
+
+function binding(){
+    var source = brower.versions();
+	//alert(source);
+    var mobile = $('#mobile').val();
+    var code = $('#code').val();
+    var coupon = $('#coupon').val();
+    if(mobile !="" && code != "" && coupon !=""){
+       $.post("http://router.111yao.com/sltRouter?method=recommend", {mobile:mobile,appCode:code,coupon:coupon,source:source,random:Math.random()}, function(data){
+           if(data=="4"){
+            $('#err').show();
+            $('#err').html("验证码错误");
+           }else if(data=="3"){
+            $('#err').show();
+            $('#err').html("优惠券已经过期");
+           }else if(data=="2"){
+            $('#err').show();
+            $('#err').html("您已经参加过该活动");
+           }else if(data=="1"){
+             $('#binding').hide();
+             $('#lingqu').html('领取成功');
+             $('#succ').show();
+           }
+       });
+    }else{
+            $('#err').show();
+            $('#err').html("信息有误");
+    }
+}
+
+
+//判断经纬度
+function checkjingweidu(jingdu,weidu){
+     jingdu =jingdu*1;
+	 weidu=weidu*1;
+	if(jingdu>zuo&&jingdu<you&&weidu>xia&&weidu<shang){
+	 alert(true);
+     return true;
+	}else{
+   alert(false);
+     return false;
+   }  
+}
+
+function product(id,name){
+	   document.location = "id*"+id+"*"+name;
+}
+</script>
+</html>

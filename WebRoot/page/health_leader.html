@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title></title>
+<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	var u = navigator.userAgent, app = navigator.appVersion;
+	var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+	var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+	var phone_type;
+	if (isAndroid) {
+		contact.common();
+		phone_type = "android";
+	} else if (isiOS) {
+		document.location = "type*1";
+		phone_type = "ios";
+	} else {
+
+	}
+
+	function common(jsondata) {
+		var json = JSON.parse(jsondata);
+		if (phone_type == "android") {
+			if (typeof (json.sessionid) == "undefined"
+					|| json.sessionid == "undefined" || json.sessionid == "") {
+				contact.login("/page/health_leader.html");
+				//document.location = "type*2";
+			} else {
+				window.location.href = "http://m.111yao.com/apphealthLeader/healthLeader!appSaveSession.action?sessionId="
+						+ json.sessionid;
+			}
+
+		} else if (phone_type == "ios") {
+			if (json.sessionid == null || json.sessionid == "(null)"
+					|| json.sessionid == "null") {
+				document.location = "type*2";
+			} else {
+				window.location.href = "http://m.111yao.com/apphealthLeader/healthLeader!appSaveSession.action?sessionId="
+						+ json.sessionid;
+			}
+		}
+	}
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<method>
+		<name>getUserInfo</name>
+		<uri>/URIService/getuserinfo</uri>
+		<param>name,id,address,price</param>
+		<description>这是一个方法</description>
+	</method>	
+	<method>
+		<name>getUserInfo1</name>
+		<uri>/URIService/getuserinfo</uri>
+		<param>name,id,address,price</param>
+		<description>这是一个方法</description>
+	</method>
+</root>
